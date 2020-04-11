@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
+import Separator from "./separator"
 import { rhythm, scale } from "../utils/typography"
 
 function Newsletter() {
@@ -126,7 +127,7 @@ const Layout = ({ location, title, children }) => {
         <Newsletter />
         <div style={{ display: "flex" }}>
           <a href={`https://mobile.twitter.com/${social.twitter}`}>Twitter</a>
-          &nbsp;&middot;&nbsp;
+          <Separator />
           <a href={`https://github.com/${social.github}`}>GitHub</a>
           <span style={{ flexGrow: 1 }} />
           <a href="rss.xml">RSS</a>
