@@ -8,7 +8,7 @@ module.exports = {
       summary: `who cares a lot about user experience, teamwork and functional programming.`,
     },
     description: `Ramblings about JavaScript, front-end development, web technologies, functional programming, software engineering and remote work.`,
-    siteUrl: `https://blog.6nok.org/`,
+    siteUrl: `https://blog.6nok.org`,
     social: {
       twitter: `frontsideair`,
       github: `frontsideair`,
