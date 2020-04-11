@@ -7,6 +7,10 @@ import SEO from "../components/seo"
 import Separator from "../components/separator"
 import { rhythm, scale } from "../utils/typography"
 
+function pluralize(number, thing) {
+  return number === 1 ? `${number} ${thing}` : `${number} ${thing}s`
+}
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const { title: siteTitle, siteUrl, social } = data.site.siteMetadata
@@ -36,7 +40,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {date}
             <Separator />
-            {post.timeToRead} minutes to read
+            {pluralize(post.timeToRead, "minute")} to read
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
