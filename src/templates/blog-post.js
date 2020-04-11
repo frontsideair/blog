@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Separator from "../components/separator"
 import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -34,6 +35,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             }}
           >
             {date}
+            <Separator />
+            {post.timeToRead} minutes to read
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -44,7 +47,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         >
           Share on Twitter
         </a>
-        &nbsp;&middot;&nbsp;
+        <Separator />
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -119,6 +122,7 @@ export const pageQuery = graphql`
       fields {
         slug
       }
+      timeToRead
     }
   }
 `
