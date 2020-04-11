@@ -125,7 +125,7 @@ const Layout = ({ location, title, children }) => {
       <footer>
         <Newsletter />
         <div style={{ display: "flex" }}>
-          <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>
+          <a href={`https://mobile.twitter.com/${social.twitter}`}>Twitter</a>
           &nbsp;&middot;&nbsp;
           <a href={`https://github.com/${social.github}`}>GitHub</a>
           <span style={{ flexGrow: 1 }} />
