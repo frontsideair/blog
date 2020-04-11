@@ -8,15 +8,14 @@ import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  const { title: siteTitle, siteUrl, social } = data.site.siteMetadata
+  const { title, description, date } = post.frontmatter
   const { previous, next } = pageContext
+  const postUrl = siteUrl + post.fields.slug
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
+      <SEO title={title} description={description || post.excerpt} />
       <article>
         <header>
           <h1
@@ -25,7 +24,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: 0,
             }}
           >
-            {post.frontmatter.title}
+            {title}
           </h1>
           <p
             style={{
@@ -34,12 +33,28 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            {date}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://twitter.com/intent/tweet?text=${title}&url=${postUrl}&via=${social.twitter}`}
+        >
+          Share on Twitter
+        </a>
+        &nbsp;&middot;&nbsp;
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://github.com/${social.github}/blog/edit/master/content/blog${post.fields.slug}index.md`}
+        >
+          Edit on GitHub
+        </a>
         <hr
           style={{
+            marginTop: rhythm(1),
             marginBottom: rhythm(1),
           }}
         />
@@ -85,6 +100,11 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
+        social {
+          twitter
+          github
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -95,6 +115,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+      }
+      fields {
+        slug
       }
     }
   }
