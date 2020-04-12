@@ -1,7 +1,7 @@
 ---
 title: Arguments vs Flags
 date: "2020-04-12T15:44:02.499Z"
-description: ""
+description: "An argument about different types of arguments."
 ---
 
 In almost all programming languages we have functions that take arguments. Some languages also have methods, which take a special `this` argument, for convenience. I don't like the idea of locating functions within data, but I see the appeal. Anyway, I recently noticed a distinction within arguments, that some arguments are a bit different than others.
