@@ -30,6 +30,7 @@ function Newsletter() {
             style={{
               height,
               border,
+              borderRadius: 0,
               width: "100%",
               paddingLeft: paddingX,
               paddingRight: buttonWidth + paddingX,
@@ -41,6 +42,7 @@ function Newsletter() {
             style={{
               height,
               border,
+              borderRadius: 0,
               position: "absolute",
               right: 0,
               width: buttonWidth,
