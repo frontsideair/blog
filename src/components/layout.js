@@ -5,9 +5,10 @@ import Separator from "./separator"
 import { rhythm, scale } from "../utils/typography"
 
 function Newsletter() {
-  const paddingX = 8
-  const buttonWidth = 96
-  const height = 42
+  const paddingX = rhythm(1 / 2)
+  const buttonWidth = rhythm(4)
+  const height = rhythm(1.5)
+  const border = "1px solid"
 
   return (
     <section>
@@ -19,7 +20,7 @@ function Newsletter() {
         method="post"
         target="popupwindow"
       >
-        <section style={{ position: "relative", maxWidth: 320 }}>
+        <section style={{ position: "relative", maxWidth: rhythm(12) }}>
           <input
             type="email"
             name="email"
@@ -28,7 +29,8 @@ function Newsletter() {
             required
             style={{
               height,
-              border: "1px solid black",
+              border,
+              borderRadius: 0,
               width: "100%",
               paddingLeft: paddingX,
               paddingRight: buttonWidth + paddingX,
@@ -39,7 +41,8 @@ function Newsletter() {
             type="submit"
             style={{
               height,
-              border: "1px solid black",
+              border,
+              borderRadius: 0,
               position: "absolute",
               right: 0,
               width: buttonWidth,
