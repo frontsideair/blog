@@ -133,7 +133,7 @@ const Layout = ({ location, title, children }) => {
           <Separator />
           <a href={`https://github.com/${social.github}`}>GitHub</a>
           <span style={{ flexGrow: 1 }} />
-          <a href="rss.xml">RSS</a>
+          <a href="/rss.xml">RSS</a>
         </div>
       </footer>
     </div>
