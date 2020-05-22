@@ -20,7 +20,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={title} description={description || post.excerpt} />
+      <SEO
+        title={title}
+        description={description || post.excerpt}
+        meta={[
+          { name: `twitter:image`, content: `${postUrl}twitter-card.jpg` },
+        ]}
+      />
       <article>
         <header>
           <h1
