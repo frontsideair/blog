@@ -24,6 +24,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={title}
         description={description || post.excerpt}
         meta={[
+          { name: `twitter:card`, content: `summary_large_image` },
           { name: `twitter:image`, content: `${postUrl}twitter-card.jpg` },
         ]}
       />
