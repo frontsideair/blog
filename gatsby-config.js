@@ -48,6 +48,18 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-social-cards`,
+            options: {
+              meta: {
+                parts: [
+                  blogName,
+                  ` - `,
+                  { field: "date", format: "mmmm dS, yyyy" },
+                ],
+              },
+            },
+          },
         ],
       },
     },
