@@ -6,8 +6,8 @@ import { rhythm, scale } from "../utils/typography"
 import { Anagram } from "./anagram"
 
 function Newsletter() {
-  const paddingX = rhythm(1 / 2)
-  const buttonWidth = rhythm(4)
+  const paddingX = 1 / 2
+  const buttonWidth = 4
   const height = rhythm(1.5)
   const border = "1px solid"
 
@@ -33,8 +33,8 @@ function Newsletter() {
               border,
               borderRadius: 0,
               width: "100%",
-              paddingLeft: paddingX,
-              paddingRight: buttonWidth + paddingX,
+              paddingLeft: rhythm(paddingX),
+              paddingRight: rhythm(buttonWidth + paddingX),
             }}
           />
           <input type="hidden" value="1" name="embed" />
@@ -46,7 +46,7 @@ function Newsletter() {
               borderRadius: 0,
               position: "absolute",
               right: 0,
-              width: buttonWidth,
+              width: rhythm(buttonWidth),
             }}
           >
             Subscribe
