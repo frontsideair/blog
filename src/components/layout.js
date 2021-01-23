@@ -3,7 +3,6 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Separator from "./separator"
 import { rhythm, scale } from "../utils/typography"
-import { Anagram } from "./anagram"
 
 function Newsletter() {
   const paddingX = 1 / 2
@@ -135,9 +134,6 @@ const Layout = ({ location, title, children }) => {
           <a href={`https://github.com/${social.github}`}>GitHub</a>
           <span style={{ flexGrow: 1 }} />
           <a href="/rss.xml">RSS</a>
-        </div>
-        <div style={{ textAlign: "center", marginTop: rhythm(2) }}>
-          Made with ❤ by <Anagram>Fatih Altinok</Anagram>.
         </div>
       </footer>
     </div>
