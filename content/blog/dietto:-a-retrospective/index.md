@@ -1,7 +1,7 @@
 ---
 title: "Dietto: a retrospective"
 date: "2021-01-24T17:16:28.692Z"
-description: ""
+description: "I will walk you through my decision process in a pet project and provide some retrospective."
 ---
 
 I've been working on a progressive web app for a while. It's a [calorie counting app](https://dietto.6nok.org/) with simplicity as the guiding principle. I dwelled on it for quite a bit of time and eventually lost my interest until lately. Then I decided to give myself a week to wrap it up.
