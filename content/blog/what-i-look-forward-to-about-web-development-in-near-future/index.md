@@ -1,16 +1,16 @@
 ---
-title: What I look forward to about web development in 2021
+title: What I look forward to about web development in near future
 date: "2021-02-25T20:06:42.381Z"
-description: "Web development is in much better shape than it ever was before. It's both easier to build products and the products we build are much more user-friendly. We see an increasing emphasis on performance, consistency, and accessibility. Here are some advancements in web development that I expect to see in 2021."
+description: "Web development is in much better shape than it ever was before. It's both easier to build products and the products we build are much more user-friendly. We see an increasing emphasis on performance, consistency, and accessibility. Here are some advancements in web development that I expect to see in near future."
 ---
 
-Web development is in much better shape than it ever was before. It's both easier to build products and the products we build are much more user-friendly. We see an increasing emphasis on performance, consistency, and accessibility. Here are some advancements in web development that I expect to see in 2021.
+Web development is in much better shape than it ever was before. It's both easier to build products and the products we build are much more user-friendly. We see an increasing emphasis on performance, consistency, and accessibility. Here are some advancements in web development that I expect to see in near future.
 
 ## Full-stack is going to be much more relevant
 
-I expect the [JAMstack](https://jamstack.org) hype to die out this year. I think it's great that it exists and it's very suitable for some use cases. (My blog is proudly powered by [Gatsby](https://www.gatsbyjs.com)! But overall it was not a great idea to host your application exclusively on a CDN and a CMS.
+I expect the [JAMstack](https://jamstack.org) hype to die out this year. I think it's great that it exists and it's very suitable for some use cases. (My blog is proudly powered by [Gatsby](https://www.gatsbyjs.com)!) But overall it was not a great idea to host your application exclusively on a CDN and a CMS.
 
-Not everything can be done on build time and fetching all dynamic content on the client can leave a lot out. You would end up missing out on status codes, meta tags, caching, and perceived speed. That's where it would make sense to have a server (or a bunch of cloud functions).
+JAMstack applications shine when everything is available at build-time. They can work with dynamic data by calling APIs during run-time, but this has a major drawback. When a server-rendered application encounters a problem, it can correctly send a 4XX or 5XX response; but when you defer data fetching to the client, you lose this ability.
 
 The project that sold me on this idea was [Remix](https://remix.run), which is a new framework built on old (and good) ideas. Built by people who worked on [React Router](https://reactrouter.com), it embraces the web standards and encourages you to do the same. Unfortunately, it's not open source (good for them though, they deserve to get paid for their exceptional work) so I won't be able to try it out anytime soon.
 
@@ -20,21 +20,21 @@ If you're not ready to switch yet, consider giving [Next.js](https://nextjs.org)
 
 ## We won't need bundling hopefully
 
-[HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) is finally here (for about 5 years) which was supposed to make bundling redundant, so why are we still bundling? Turns out it's not as simple as it looks, [according to](https://blog.khanacademy.org/forgo-js-packaging-not-so-fast/) engineers at Khan Academy. But there are good ways to unbundle [according to](https://medium.com/@asyncmax/the-right-way-to-bundle-your-assets-for-faster-sites-over-http-2-437c37efe3ff) others.
+[HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) is finally here (for about 5 years) which was supposed to make bundling redundant, so why are we still bundling? Turns out it's not as simple as it looks, [according to engineers at Khan Academy](https://blog.khanacademy.org/forgo-js-packaging-not-so-fast/). But there are good ways to unbundle [according to others](https://medium.com/@asyncmax/the-right-way-to-bundle-your-assets-for-faster-sites-over-http-2-437c37efe3ff).
 
 On the other hand, the first-time load shouldn't be our only concern, repeat loads should also be fast. (Wasn't this kind of the point of service workers?) If you bundle, the tiniest changes made cause the bundle to be invalidated. But if you serve assets at the module level, then you can benefit from the browser cache.
 
 The good news is that [browsers are capable](https://caniuse.com/es6-module) of loading scripts as modules. Better yet, many CDNs like [Skypack](https://www.skypack.dev) and [JSPM](https://jspm.org) serve npm packages as modules. So we don't need node_modules or webpack anymore?
 
-Unfortunately during my tests, I found out that TypeScript doesn't support loading modules from URLs. But I hope to see improvements about this in 2021. (One solution is to use [Deno](https://deno.land), which is awesome.)
+Unfortunately during my tests, I found out that TypeScript doesn't support loading modules from URLs. But I hope to see improvements about this in near future. (One solution is to use [Deno](https://deno.land), which is awesome.)
 
 ## CSS-in-JS is going to become even more interesting
 
 Currently, my favorite CSS solution is [Tailwind CSS](https://tailwindcss.com). Not because it's technically superior to others, but because it has great documentation and is batteries-included. But it has a major drawback, which is its file size.
 
-This is a solved problem, of course, you're supposed to [purge](https://tailwindcss.com/docs/optimizing-for-production) the styles you don't use. But this leads to the cache-invalidation-with-every-tiny-change drawback. I hope to see a new and exciting solution to this problem in 2021. I will continue using Tailwind until I find such a solution though.
+This is a solved problem, of course, you're supposed to [purge](https://tailwindcss.com/docs/optimizing-for-production) the styles you don't use. But this leads to the cache-invalidation-with-every-tiny-change drawback. I hope to see a new and exciting solution to this problem in near future. I will continue using Tailwind until I find such a solution though.
 
-In my mind, an ideal solution would be to use top-level CSS variables as design tokens and write (scoped) vanilla CSS for low-level components only. I will have more to tell about this later, hopefully.
+In my mind, an ideal solution would be to use top-level CSS variables as design tokens and write (scoped) vanilla CSS for low-level components only. I'm planning to write more in this later.
 
 ## More progressive enhancement, please
 
@@ -44,6 +44,4 @@ If you want your website to be responsive even before the scripts are loaded, yo
 
 I have reason to believe that Remix is actively working on this and hope Next.js will follow.
 
-# Conclusion
-
-As you can see, a central focus of my expectations boils down to simplicity and an adherence to standards. I think these concepts go hand in hand and web development will greatly benefit from them, both developers and end-users.
+In conclusion, a central focus of my expectations boils down to simplicity and an adherence to standards. I think these concepts go hand in hand and web development will greatly benefit from them, both developers and end-users.
