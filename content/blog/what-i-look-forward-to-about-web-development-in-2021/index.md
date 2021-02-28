@@ -36,11 +36,11 @@ This is a solved problem, of course, you're supposed to [purge](https://tailwind
 
 In my mind, an ideal solution would be to use top-level CSS variables as design tokens and write (scoped) vanilla CSS for low-level components only. I'm planning to write more in this later.
 
-## More progressive enhancement, please
+## More [progressive enhancement](https://adactio.com/journal/16404), please
 
 I like what Next.js and Gatsby do with the `Link` and `Image` components. They have super-powers when (or if) JavaScript loads, but they still work even if it doesn't. I wonder why don't forms work like that?
 
-If you want your website to be responsive even before the scripts are loaded, you should build on web standards. (And you should [care about](https://web.dev/fid/) this.) I don't think there are a lot of people who disable JavaScript and expect everything to work. Not every website is a document anymore, many would not be functional without JavaScript. But many websites are kind of like that and there are a ton of people who have slow internet speeds; they should not wait multiple seconds to interact with your site.
+If you want your website to be [responsive](https://addyosmani.com/blog/rehydration/) even before the scripts are loaded, you should build on web standards. (And you should [care about](https://web.dev/fid/) this.) I don't think there are a lot of people who disable JavaScript and expect everything to work. Not every website is a document anymore, many would not be functional without JavaScript. But many websites are kind of like that and there are a ton of people who have slow internet speeds; they should not wait multiple seconds to interact with your site.
 
 I have reason to believe that Remix is actively working on this and hope Next.js will follow.
 
