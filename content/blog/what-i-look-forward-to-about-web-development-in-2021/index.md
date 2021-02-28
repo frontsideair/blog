@@ -1,16 +1,16 @@
 ---
-title: What I look forward to about web development in near future
+title: What I look forward to about web development in 2021
 date: "2021-02-25T20:06:42.381Z"
-description: "Web development is in much better shape than it ever was before. It's both easier to build products and the products we build are much more user-friendly. We see an increasing emphasis on performance, consistency, and accessibility. Here are some advancements in web development that I expect to see in near future."
+description: "Web development is in much better shape than it ever was before. It's both easier to build products and the products we build are much more user-friendly. We see an increasing emphasis on performance, consistency, and accessibility. Here are some advancements in web development that I expect to see in 2021."
 ---
 
-Web development is in much better shape than it ever was before. It's both easier to build products and the products we build are much more user-friendly. We see an increasing emphasis on performance, consistency, and accessibility. Here are some advancements in web development that I expect to see in near future.
+Web development is in much better shape than it ever was before. It's both easier to build products and the products we build are much more user-friendly. We see an increasing emphasis on performance, consistency, and accessibility. Here are some advancements in web development that I expect to see in 2021.
 
 ## Full-stack is going to be much more relevant
 
 I expect the [JAMstack](https://jamstack.org) hype to die out this year. I think it's great that it exists and it's very suitable for some use cases. (My blog is proudly powered by [Gatsby](https://www.gatsbyjs.com)!) But overall it was not a great idea to host your application exclusively on a CDN and a CMS.
 
-JAMstack applications shine when everything is available at build-time. They can work with dynamic data by calling APIs during run-time, but this has a major drawback. When a server-rendered application encounters a problem, it can correctly send a 4XX or 5XX response; but when you defer data fetching to the client, you lose this ability.
+JAMstack applications shine when everything is available at build-time. They can work with dynamic data by calling APIs during run-time, but this has a major drawback. All they can return is a 200 response, which hurts your SEO score and CDN behavior. In those cases, server-side rendering with proper HTTP response codes is a much better choice.
 
 The project that sold me on this idea was [Remix](https://remix.run), which is a new framework built on old (and good) ideas. Built by people who worked on [React Router](https://reactrouter.com), it embraces the web standards and encourages you to do the same. Unfortunately, it's not open source (good for them though, they deserve to get paid for their exceptional work) so I won't be able to try it out anytime soon.
 
@@ -26,13 +26,13 @@ On the other hand, the first-time load shouldn't be our only concern, repeat loa
 
 The good news is that [browsers are capable](https://caniuse.com/es6-module) of loading scripts as modules. Better yet, many CDNs like [Skypack](https://www.skypack.dev) and [JSPM](https://jspm.org) serve npm packages as modules. So we don't need node_modules or webpack anymore?
 
-Unfortunately during my tests, I found out that TypeScript doesn't support loading modules from URLs. But I hope to see improvements about this in near future. (One solution is to use [Deno](https://deno.land), which is awesome.)
+Unfortunately during my tests, I found out that TypeScript doesn't support loading modules from URLs. But I hope to see improvements about this in 2021. (One solution is to use [Deno](https://deno.land), which is awesome.)
 
 ## CSS-in-JS is going to become even more interesting
 
 Currently, my favorite CSS solution is [Tailwind CSS](https://tailwindcss.com). Not because it's technically superior to others, but because it has great documentation and is batteries-included. But it has a major drawback, which is its file size.
 
-This is a solved problem, of course, you're supposed to [purge](https://tailwindcss.com/docs/optimizing-for-production) the styles you don't use. But this leads to the cache-invalidation-with-every-tiny-change drawback. I hope to see a new and exciting solution to this problem in near future. I will continue using Tailwind until I find such a solution though.
+This is a solved problem, of course, you're supposed to [purge](https://tailwindcss.com/docs/optimizing-for-production) the styles you don't use. But this leads to the cache-invalidation-with-every-tiny-change drawback. I hope to see a new and exciting solution to this problem in 2021. I will continue using Tailwind until I find such a solution though.
 
 In my mind, an ideal solution would be to use top-level CSS variables as design tokens and write (scoped) vanilla CSS for low-level components only. I'm planning to write more in this later.
 
