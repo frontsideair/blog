@@ -11,9 +11,12 @@ function Newsletter() {
   const border = "1px solid"
 
   return (
-    <section>
+    <section id="newsletter">
       <h3>Newsletter</h3>
-      <p>Please subscribe to get new posts right to your inbox.</p>
+      <p>
+        Please subscribe to get new posts and monthly updates right to your
+        inbox.
+      </p>
 
       <form
         action="https://tinyletter.com/frontsideair"
