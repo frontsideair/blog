@@ -5,7 +5,7 @@ const cp = require("child_process")
 function template(title, date, summary = "") {
   return `
 ---
-title: ${title}
+title: "${title}"
 date: "${date}"
 description: "${summary}"
 ---
