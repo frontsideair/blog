@@ -17,7 +17,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { title, description, date } = post.frontmatter
   const { previous, next } = pageContext
   const postUrl = siteUrl + post.fields.slug
-  const slugWithoutTrailingSlash = post.fields.slug.slice(0, -1)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -104,18 +103,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </nav>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <img
-          alt="Number of visits for this page"
-          src={`https://frontsideair.goatcounter.com/counter/${slugWithoutTrailingSlash}.svg`}
-        />
-      </div>
     </Layout>
   )
 }

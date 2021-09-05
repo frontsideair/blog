@@ -77,7 +77,9 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `-KkqY164SihPqHD4tOtlWiNbfP_oX3QOkzmui-q1tPE`,
         },
       ].concat(meta)}
-    />
+    >
+      <script async data-no-cookie data-api="/_hive" src="/bee.js" />
+    </Helmet>
   )
 }
 
