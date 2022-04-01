@@ -4,7 +4,7 @@
   "dependencies": {
     "gatsby": "^4.11.1",
     "gatsby-image": "^3.11.0",
-    "gatsby-plugin-feed": "^3.14.0",
+    "gatsby-plugin-feed": "^4.11.1",
     "gatsby-plugin-manifest": "^4.11.1",
     "gatsby-plugin-offline": "^5.11.1",
     "gatsby-plugin-react-helmet": "^5.11.0",
