@@ -133,9 +133,9 @@ If you have come this far, congratulations! This was the result of months of res
 
 As a treat, here's some trivia regarding the internal subproject codenames in the React project:
 
+- Fiber was the codename for the core rewrite, enabling asynchronous rendering
 - Fizz is the codename for the new server-side rendering architecture
-- Flight is the codename for Server Components
-- Flight was previously called Blocks, and Chunks before that
+- Flight is the codename for Server Components; it was previously called Blocks, and Chunks before that
 - Fire was the discontinued initiative to modernize React DOM
 - Flare was a subset of Fire to modernize the event system, which was also killed
 - Codenames mostly start with the letter "F"
