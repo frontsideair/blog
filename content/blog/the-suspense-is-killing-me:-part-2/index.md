@@ -1,6 +1,6 @@
 ---
 title: "The Suspense is Killing Me: Part 2"
-date: "2022-07-24T21:47:59.364Z"
+date: "2022-07-26T14:51:59.364Z"
 description: "Part 2 in the saga of Concurrent React and Suspense; going over what got shipped in React 18, what comes next, and how it all fits together."
 ---
 
