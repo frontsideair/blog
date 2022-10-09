@@ -62,7 +62,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={`https://github.com/${social.github}/blog/edit/master/content/blog${post.fields.slug}index.md`}
+          href={`https://github.com/${social.github}/blog/edit/main/content/blog${post.fields.slug}index.md`}
         >
           Edit on GitHub
         </a>
