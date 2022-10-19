@@ -20,14 +20,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo
-        title={title}
-        description={description || post.excerpt}
-        meta={[
-          { name: `twitter:card`, content: `summary_large_image` },
-          { name: `twitter:image`, content: `${postUrl}twitter-card.jpg` },
-        ]}
-      />
       <article>
         <header>
           <h1
@@ -104,6 +96,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </ul>
       </nav>
     </Layout>
+  )
+}
+
+export const Head = ({ data: { site, markdownRemark: post } }) => {
+  const postUrl = site.siteMetadata.siteUrl + post.fields.slug
+  return (
+    <Seo
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+    >
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={`${postUrl}twitter-card.jpg`} />
+    </Seo>
   )
 }
 
