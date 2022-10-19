@@ -99,8 +99,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   )
 }
 
-export const Head = ({ data: { markdownRemark: post } }) => {
-  const postUrl = data.site.siteMetadata.siteUrl + post.fields.slug
+export const Head = ({ data: { site, markdownRemark: post } }) => {
+  const postUrl = site.siteMetadata.siteUrl + post.fields.slug
   return (
     <Seo
       title={post.frontmatter.title}
