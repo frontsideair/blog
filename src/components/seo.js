@@ -7,10 +7,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ description, lang, meta, title }) => {
+const SEO = ({ description, lang, title, children }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -30,69 +29,39 @@ const SEO = ({ description, lang, meta, title }) => {
   const metaDescription = description || site.siteMetadata.description
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={
-        title
+    <>
+      <title>
+        {title
           ? `${title} | ${site.siteMetadata.title}`
-          : site.siteMetadata.title
-      }
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.social.twitter,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          name: `google-site-verification`,
-          content: `-KkqY164SihPqHD4tOtlWiNbfP_oX3QOkzmui-q1tPE`,
-        },
-      ].concat(meta)}
-    >
+          : site.siteMetadata.title}
+      </title>
+      <meta name="description" content={metaDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary" />
+      <meta
+        name="twitter:creator"
+        content={site.siteMetadata?.social?.twitter || ``}
+      />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta
+        name="google-site-verification"
+        content="-KkqY164SihPqHD4tOtlWiNbfP_oX3QOkzmui-q1tPE"
+      />
+      {children}
       <script async data-no-cookie data-api="/_hive" src="/bee.js" />
-    </Helmet>
+    </>
   )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
   description: ``,
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
 

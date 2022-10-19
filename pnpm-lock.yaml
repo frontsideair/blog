@@ -8,7 +8,6 @@ specifiers:
   gatsby-plugin-manifest: ^4.24.0
   gatsby-plugin-offline: ^5.24.0
   gatsby-plugin-pnpm: ^1.2.10
-  gatsby-plugin-react-helmet: ^5.24.0
   gatsby-plugin-sharp: ^4.24.0
   gatsby-plugin-sitemap: ^5.24.0
   gatsby-plugin-typography: ^4.24.0
@@ -27,7 +26,6 @@ specifiers:
   prismjs: ^1.25.0
   react: ^18.0.0
   react-dom: ^18.0.0
-  react-helmet: ^6.1.0
   react-typography: ^0.16.19
   typeface-merriweather: ^1.1.13
   typeface-montserrat: ^1.1.13
@@ -42,7 +40,6 @@ dependencies:
   gatsby-plugin-manifest: 4.24.0_fbibhz2hy2j7luvrxau5es57wq
   gatsby-plugin-offline: 5.24.0_czy62c6eptkbjlu6wmprghvuvm
   gatsby-plugin-pnpm: 1.2.10_gatsby@4.24.4
-  gatsby-plugin-react-helmet: 5.24.0_7fumqcnxujwmx6wpbcdah5h2ru
   gatsby-plugin-sharp: 4.24.0_fbibhz2hy2j7luvrxau5es57wq
   gatsby-plugin-sitemap: 5.24.0_czy62c6eptkbjlu6wmprghvuvm
   gatsby-plugin-typography: 4.24.0_3lwgxykemfkhzovlkdxpe5cseu
@@ -60,7 +57,6 @@ dependencies:
   prismjs: 1.27.0
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
-  react-helmet: 6.1.0_react@18.0.0
   react-typography: 0.16.20_react@18.0.0
   typeface-merriweather: 1.1.13
   typeface-montserrat: 1.1.13
@@ -2397,7 +2393,7 @@ packages:
     dependencies:
       '@jridgewell/set-array': 1.1.2
       '@jridgewell/sourcemap-codec': 1.4.14
-      '@jridgewell/trace-mapping': 0.3.16
+      '@jridgewell/trace-mapping': 0.3.17
     dev: false
 
   /@jridgewell/resolve-uri/3.1.0:
@@ -6677,18 +6673,6 @@ packages:
       lodash.uniq: 4.5.0
     dev: false
 
-  /gatsby-plugin-react-helmet/5.24.0_7fumqcnxujwmx6wpbcdah5h2ru:
-    resolution: {integrity: sha512-SU/SrWsbEFLQhuzDXucYlQ4O5pTdpOdxw07xIRwyFfxFzGml/9f62h2dTtUJOIXP1mYfl31bw7eCbGlc8QzF5w==}
-    engines: {node: '>=14.15.0'}
-    peerDependencies:
-      gatsby: ^4.0.0-next
-      react-helmet: ^5.1.3 || ^6.0.0
-    dependencies:
-      '@babel/runtime': 7.17.8
-      gatsby: 4.24.4_dg7sw2iti4mjldmyq6f723cvcy
-      react-helmet: 6.1.0_react@18.0.0
-    dev: false
-
   /gatsby-plugin-sharp/4.24.0_fbibhz2hy2j7luvrxau5es57wq:
     resolution: {integrity: sha512-wVs8F9zLeiLf02yLi8vjse1vqSrZsx2u3RsMhoSv1bEinyaI5bcoLZ7mMJCsEeZe2G9mvNrPi4Ymhh/YzgxYCg==}
     engines: {node: '>=14.15.0'}
@@ -10510,22 +10494,6 @@ packages:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==}
     dev: false
 
-  /react-fast-compare/3.2.0:
-    resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
-    dev: false
-
-  /react-helmet/6.1.0_react@18.0.0:
-    resolution: {integrity: sha512-4uMzEY9nlDlgxr61NL3XbKRy1hEkXmKNXhjbAIOVw5vcFrsdYbH2FEwcNyWvWinl103nXgzYNlns9ca+8kFiWw==}
-    peerDependencies:
-      react: '>=16.3.0'
-    dependencies:
-      object-assign: 4.1.1
-      prop-types: 15.8.1
-      react: 18.0.0
-      react-fast-compare: 3.2.0
-      react-side-effect: 2.1.1_react@18.0.0
-    dev: false
-
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
@@ -10551,14 +10519,6 @@ packages:
       neo-async: 2.6.2
       react: 18.0.0
       webpack: 5.70.0
-    dev: false
-
-  /react-side-effect/2.1.1_react@18.0.0:
-    resolution: {integrity: sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==}
-    peerDependencies:
-      react: ^16.3.0 || ^17.0.0
-    dependencies:
-      react: 18.0.0
     dev: false
 
   /react-typography/0.16.20_react@18.0.0:
