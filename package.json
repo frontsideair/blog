@@ -46,5 +46,5 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
-  "packageManager": "pnpm@7.8.0"
+  "packageManager": "pnpm@7.13.3"
 }
