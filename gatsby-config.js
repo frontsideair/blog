@@ -14,6 +14,7 @@ module.exports = {
       github: `frontsideair`,
     },
   },
+  trailingSlash: "always",
   plugins: [
     "gatsby-plugin-pnpm",
     {
