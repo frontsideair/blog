@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Analytics } from "@vercel/analytics/react"
 
 const SEO = ({ description, lang, title, children }) => {
   const { site } = useStaticQuery(
@@ -52,6 +53,7 @@ const SEO = ({ description, lang, title, children }) => {
       />
       {children}
       <script async data-no-cookie data-api="/_hive" src="/bee.js" />
+      <Analytics />
     </>
   )
 }
