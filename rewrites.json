@@ -6,5 +6,9 @@
   {
     "source": "/_hive/*",
     "destination": "https://hive.splitbee.io/*"
+  },
+  {
+    "source": "/va/script.js",
+    "destination": "https://vercel.com/va/script.js"
   }
 ]
