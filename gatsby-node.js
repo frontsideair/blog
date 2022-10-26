@@ -71,17 +71,3 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
-
-const regex = /^((?!\/va\/script\.js).)*$/
-
-exports.onCreatePage = ({ page, actions }) => {
-  const { deletePage, createPage } = actions
-
-  if (page.path === "/404/" || page.path === "/dev-404-page/") {
-    const newPage = { ...page }
-    newPage.matchPath = regex
-
-    deletePage(page)
-    createPage(newPage)
-  }
-}
