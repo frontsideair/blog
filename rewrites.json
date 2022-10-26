@@ -9,7 +9,6 @@
   },
   {
     "source": "/va/script.js",
-    "destination": "/va/script.js",
-    "continue": false
+    "destination": "https://vercel.com/va/script.js"
   }
 ]
