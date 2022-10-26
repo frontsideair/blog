@@ -9,6 +9,6 @@
   },
   {
     "source": "/va/*",
-    "destination": "https://blog.6nok.org/va/*"
+    "destination": "/va/*"
   }
 ]
