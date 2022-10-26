@@ -72,7 +72,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-export const onCreatePage = ({ page, actions }) => {
+exports.onCreatePage = ({ page, actions }) => {
   const { deletePage, createPage } = actions
 
   if (page.path === "/404/" || page.path === "/dev-404-page/") {
