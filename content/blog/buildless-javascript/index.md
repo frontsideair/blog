@@ -4,7 +4,7 @@ date: "2023-02-17T10:27:06.108Z"
 description: 'I really liked Julia Evans'' blog post "Writing Javascript without a build system" and would like to offer a few alternatives.'
 ---
 
-I recently stumbled upon Julia Evans' blog post ["Writing Javascript without a build system"](https://jvns.ca/blog/2019/10/31/webpack-never-was/) and I can highly empathize with it. I too wanted to write JavaScript without a build system and [bit rot](https://en.wikipedia.org/wiki/Software_rot) is never fun. I would like to offer a few alternatives to Julia's approach, which I think already covers the basics.
+I stumbled upon Julia Evans' recent blog post ["Writing Javascript without a build system"](https://jvns.ca/blog/2019/10/31/webpack-never-was/) and I can highly empathize with it. I too wanted to write JavaScript without a build system and [bit rot](https://en.wikipedia.org/wiki/Software_rot) is never fun. I would like to offer a few alternatives to Julia's approach, which I think already covers the basics.
 
 I remember the first time I opened an old JavaScript project (my application project for my first React-related role) and it didn't build at all. Back then we didn't have lockfiles yet, and an incompatible dependency was the reason it didn't build. The situation is much better now than how it was before, but old projects still can and will fail to build for various reasons.
 
