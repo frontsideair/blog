@@ -45,7 +45,7 @@ You can see Fresh as an alternative to metaframeworks like Next.js and Remix, wi
 
 ---
 
-This topic is dear to my heart, as I have already written on this topic before. In [Do we really need node_modules or npm?](https://blog.6nok.org/do-we-really-need-node_modules-or-npm/) I talked about using [UNPKG](https://unpkg.com) to manage dependencies and some ideas for the future. In [What I look forward to about web development in 2021](https://blog.6nok.org/what-i-look-forward-to-about-web-development-in-2021/) I have a whole section about bundling and CDNs capable of serving ES Modules with a hat tip to Deno.
+This topic is dear to my heart, as I have already written on this topic before. In [Do we really need node_modules or npm?](/do-we-really-need-node_modules-or-npm/) I talked about using [UNPKG](https://unpkg.com) to manage dependencies and some ideas for the future. In [What I look forward to about web development in 2021](/what-i-look-forward-to-about-web-development-in-2021/#we-wont-need-bundling-hopefully) I have a whole section about bundling and CDNs capable of serving ES Modules with a hat tip to Deno.
 
 I'm happy to see that some of these solutions became more stable and approachable. I can safely say that it's possible to build websites without a build step, and if you need, there are robust solutions to keep them working for years into the future.
 
