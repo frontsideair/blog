@@ -15,6 +15,7 @@ specifiers:
   gatsby-plugin-typography: ^4.24.0
   gatsby-plugin-vercel: ^1.0.3
   gatsby-plugin-zeit-now: ^0.5.0
+  gatsby-remark-autolink-headers: ^6.6.0
   gatsby-remark-copy-linked-files: ^5.24.0
   gatsby-remark-images: ^6.24.0
   gatsby-remark-prismjs: ^6.24.0
@@ -49,6 +50,7 @@ dependencies:
   gatsby-plugin-typography: 4.25.0_j6xbqfn6h3dmy5um7wny6fzgsa
   gatsby-plugin-vercel: 1.0.4
   gatsby-plugin-zeit-now: 0.5.0_gatsby@4.25.4
+  gatsby-remark-autolink-headers: 6.6.0_6gfigld75rm7rrzv5vjouk354m
   gatsby-remark-copy-linked-files: 5.25.0_gatsby@4.25.4
   gatsby-remark-images: 6.25.0_c4ebbafybzmh26iep5hpxccrn4
   gatsby-remark-prismjs: 6.25.0_oj4ypwjvm7ycjl7s5k4wxrira4
@@ -6666,6 +6668,24 @@ packages:
       prop-types: 15.8.1
       react: 18.0.0
       react-dom: 18.0.0_react@18.0.0
+    dev: false
+
+  /gatsby-remark-autolink-headers/6.6.0_6gfigld75rm7rrzv5vjouk354m:
+    resolution: {integrity: sha512-T9eV/lHu1llnik0RWcTqy5+49GOC8oIuHgCSDSz/drodNGt88DR//9FwjjfWnSTTZEAyUZGqAx7ZMFtoJDcZ3g==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      gatsby: ^5.0.0-next
+      react: ^18.0.0 || ^0.0.0
+      react-dom: ^18.0.0 || ^0.0.0
+    dependencies:
+      '@babel/runtime': 7.20.13
+      gatsby: 4.25.4_6iaewdwc2gorfgsym2vayr5mzu
+      github-slugger: 1.5.0
+      lodash: 4.17.21
+      mdast-util-to-string: 2.0.0
+      react: 18.0.0
+      react-dom: 18.0.0_react@18.0.0
+      unist-util-visit: 2.0.3
     dev: false
 
   /gatsby-remark-copy-linked-files/5.25.0_gatsby@4.25.4:
