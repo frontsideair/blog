@@ -141,6 +141,6 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
   flags: {
-    PARTIAL_HYDRATION: true,
+    PARTIAL_HYDRATION: false,
   },
 }
