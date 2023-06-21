@@ -14,7 +14,7 @@ function pluralize(number, thing) {
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const { title: siteTitle, siteUrl, social } = data.site.siteMetadata
-  const { title, description, date } = post.frontmatter
+  const { title, date } = post.frontmatter
   const { previous, next } = pageContext
   const postUrl = siteUrl + post.fields.slug
 
