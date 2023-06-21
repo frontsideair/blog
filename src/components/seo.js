@@ -51,7 +51,6 @@ const SEO = ({ description, lang, title, children }) => {
         content="-KkqY164SihPqHD4tOtlWiNbfP_oX3QOkzmui-q1tPE"
       />
       {children}
-      <script async data-no-cookie data-api="/_hive" src="/bee.js" />
     </>
   )
 }
