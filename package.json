@@ -13,7 +13,6 @@
     "gatsby-plugin-sitemap": "^6.11.0",
     "gatsby-plugin-typography": "^5.11.0",
     "gatsby-plugin-vercel": "^1.0.3",
-    "gatsby-plugin-zeit-now": "^0.5.0",
     "gatsby-remark-autolink-headers": "^6.11.0",
     "gatsby-remark-copy-linked-files": "^6.11.0",
     "gatsby-remark-images": "^7.11.0",
