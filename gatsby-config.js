@@ -16,7 +16,6 @@ module.exports = {
   },
   trailingSlash: "always",
   plugins: [
-    "gatsby-plugin-pnpm",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
