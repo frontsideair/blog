@@ -8,7 +8,7 @@ I stumbled upon Julia Evans' recent blog post ["Writing Javascript without a bui
 
 I remember the first time I opened an old JavaScript project (my application project for my first React-related role) and it didn't build at all. Back then we didn't have widespread usage of [lockfiles](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json) yet, and an incompatible dependency was the reason it didn't build. The situation is much better now than how it was before, but old projects still can and will fail to build for various reasons.
 
-Bit rot is an especially important consideration for me, but I also like to have simpler projects with fewer moving parts. I remember hearing that we wouldn't need bundling with HTTP/2, but that future never came. If we could do less work during the build, we would waste less time and resources during CI.
+Bit rot is an especially important consideration for me from a [software preservation](https://en.wikipedia.org/wiki/Digital_preservation) perspective, but I also like to have simpler projects with fewer moving parts. I remember hearing that we wouldn't need bundling with HTTP/2, but that future never came. If we could do less work during the build, we would waste less time and resources during CI.
 
 Lastly, let's not forget that JavaScript is a build-less programming language by design, and we implemented many tools on top of it. Even though I like ensuring the quality of my code and making sure it's minimal and backward-compatible, I also yearn for a time when we could actually read the source code of a random website. [^1]
 
