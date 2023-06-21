@@ -48,5 +48,5 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
-  "packageManager": "pnpm@7.13.3"
+  "packageManager": "npm@9.6.3"
 }
