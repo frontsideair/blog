@@ -1,6 +1,5 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const rewrites = require("./rewrites.json")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
@@ -44,14 +43,6 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-
-  rewrites.forEach((redirect) =>
-    createRedirect({
-      fromPath: redirect.source,
-      toPath: redirect.destination,
-      statusCode: 200,
-    })
-  )
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
