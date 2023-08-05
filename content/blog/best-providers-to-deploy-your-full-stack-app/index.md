@@ -34,19 +34,19 @@ I have been using Vercel for far too long to fully understand what I was missing
 
 5. Observability
 
-Having a type-checker, tests, and lint rules is awesome and can give you a lot of confidence. But you should be able to observe the health and metrics of a running system so you have some idea about what's going on and can have insight when things inevitably go wrong. Logs, metrics, tracing, health checks, and alerting are some of the most important observability tools that you simply must have. Analytics are similar but can give you business insights instead of operational ones.
+Having a type-checker, tests, and lint rules is awesome and can give you a lot of confidence. But you should be able to [observe](<https://en.wikipedia.org/wiki/Observability_(software)>) the health and metrics of a running system so you have some idea about what's going on and can have insight when things inevitably go wrong. Logs, metrics, tracing, health checks, and alerting are some of the most important observability tools that you simply must have. Analytics are similar but can give you business insights instead of operational ones.
 
 6. Transactional emails
 
-Email is here to stay and it's hard to imagine an authentication solution that doesn't send transactional emails. In the same vein of avoiding vendor lock-in, an ideal email solution gives you an SMTP endpoint that you can use via an off-the-shelf library and can swap out during local development and testing.
+Email is here to stay and it's hard to imagine an authentication solution that doesn't send transactional emails. In the same vein of avoiding vendor lock-in, an ideal email solution gives you an SMTP endpoint that you can use via an [off-the-shelf library](https://nodemailer.com/about/) and can swap out during local development and testing.
 
 7. Local/offline development
 
-While I agree that dev/prod parity is impossible, there's still an immense benefit to being able to raise a full-stack application locally for development and testing. In an ideal world, you could ship your whole local environment to the cloud, but I will take online local development over see-your-changes-after-you-merge any day.
+While I agree that [dev/prod parity](https://12factor.net/dev-prod-parity) is impossible, there's still an immense benefit to being able to raise a full-stack application locally for development and testing. In an ideal world, you could ship your whole local environment to the cloud, but I will take online local development over see-your-changes-after-you-merge any day.
 
 8. Price
 
-The best things in life are free. A generous free tier is a must, and after you start turning a profit, it shouldn't break the bank. Ideally, you should be able to put a spending limit, accepting downtime over infinite costs.
+The best things in life are free. A generous [free tier](https://www.techtarget.com/searchcloudcomputing/tip/Try-before-you-buy-with-free-tiers-in-cloud) is a must, and after you start turning a profit, it shouldn't break the bank. Ideally, you should be able to put a spending limit, accepting downtime over infinite costs.
 
 ---
 
@@ -78,7 +78,7 @@ What sets Cloudflare apart in my eyes is their commitment to [offline developmen
 
 It would be a massive omission if I didn't list [AWS](https://aws.amazon.com) here. They offer [every service you can imagine](https://aws.amazon.com/products/) and more. They have an [excellent track record](https://twitter.com/rakyll/status/1671354533375795200) for maintaining their products, [unlike a certain cloud provider](https://blog.pragmaticengineer.com/google-domains-to-shut-down/). Nothing is missing in their vast catalog.
 
-However, AWS is also famous for being complicated to use. Their demo full-stack app has [3,000 lines of infrastructure configuration](https://github.com/aws-samples/aws-bookstore-demo-app/blob/41838c0/template/master-fullstack.yaml). Using [CDK](https://aws.amazon.com/cdk/) or [Terraform](https://www.terraform.io) may ease the pain a little bit, but you still have to wrangle the low level, close to the metal infrastructure. (Well, there's [Amplify](https://aws.amazon.com/amplify/), but it's nowhere near my requirements, stuck in a [limbo of jamstack](https://remotesynthesis.com/blog/goodbye-jamstack/).)
+However, AWS is also famous for being complicated to use. Their demo full-stack app has [3,000 lines of infrastructure configuration](https://github.com/aws-samples/aws-bookstore-demo-app/blob/41838c0/template/master-fullstack.yaml). Using [CDK](https://aws.amazon.com/cdk/) or [Terraform](https://www.terraform.io) may ease the pain a little bit, but you still have to fight the low level, close to the metal infrastructure. (Well, there's [Amplify](https://aws.amazon.com/amplify/), but it's nowhere near my requirements, stuck in a [limbo of jamstack](https://remotesynthesis.com/blog/goodbye-jamstack/).)
 
 Or, you can pay another company to do it for you. There are many to choose from like [Seed](https://seed.run), [Flightcontrol](https://www.flightcontrol.dev), [Begin](https://begin.com), and [Serverless](https://www.serverless.com), with more cropping up each day. Many of these solutions also provide GitOps for you so you can push to deploy with peace of mind, and many of them provide some form of local development too. It's anyone's guess though, if they'll provide the same stability AWS offers.
 
