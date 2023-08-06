@@ -1,6 +1,6 @@
 ---
 title: "Best providers to deploy your full-stack app"
-date: "2023-08-02T22:14:25.991Z"
+date: "2023-08-06T19:01:25.991Z"
 description: "It's hard to deploy an app or depend on a slew of providers that may not be around in a year. Let me list a few reliable options that solve my problems."
 ---
 
