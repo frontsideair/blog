@@ -26,7 +26,7 @@ I specifically mentioned "relational", because I don't want to be locked into a 
 
 3. Blob storage
 
-In this day and age, it's near impossible to not have uploads in your application. It's always an option to store things in block storage or your database, but it's not as performant, reliable, or cost-effective as using blob storage. S3-compatible APIs have become the de facto standard and adopted by open-source solutions like [MinIO](https://min.io) and [Garage](https://garagehq.deuxfleurs.fr), so it's easy to avoid vendor lock-in.
+In this day and age, it's very likely to have upload functionality in your application. It's always an option to store things in block storage or your database, but it's not as performant, reliable, or cost-effective as using blob storage. You may also have static assets that you want to store in blob storage and serve using a content delivery network. S3-compatible APIs have become the de facto standard and adopted by open-source solutions like [MinIO](https://min.io) and [Garage](https://garagehq.deuxfleurs.fr), so it's easy to avoid vendor lock-in.
 
 4. GitOps
 
