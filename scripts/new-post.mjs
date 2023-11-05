@@ -1,6 +1,6 @@
-const slugify = require("slugify")
-const fs = require("fs-extra")
-const cp = require("child_process")
+import slugify from "slugify"
+import extra from "fs-extra"
+import cp from "node:child_process"
 
 function template(title, date, summary = "") {
   return `
@@ -12,8 +12,7 @@ description: "${summary}"
   `.trim()
 }
 
-const title = process.argv[2]
-const summary = process.argv[3]
+const [title, summary] = process.argv.slice(2)
 
 if (!title) {
   console.log(`Usage: npm run new-post "Post title" "Post summary"`)
@@ -24,7 +23,7 @@ if (!title) {
   const body = template(title, date, summary)
 
   try {
-    fs.outputFileSync(path, body)
+    extra.outputFileSync(path, body)
     cp.spawnSync("code", [path])
     console.log(`Blog entry "${title}" is created at "${path}" successfully!`)
   } catch (error) {
