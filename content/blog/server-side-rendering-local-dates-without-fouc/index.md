@@ -21,15 +21,15 @@ First, let's establish some concepts. If you're confused about server-side rende
 - Hydration[^1] is the step where React conceptually aligns the HTML it would generate with the HTML the server already generated and attaches itself to enable interactivity.
 - If the HTML React generates doesn't match up with the server-generated HTML, that's what we call a hydration mismatch, and React throws an error.
 - Hydration mismatches may occur for many reasons, but the most common reason is that the server and client are fundamentally different. They have different APIs and know separate things.
-- User timezone is one of the knowledge differences, and there's no way for the server to know the user's timezone before rendering the page.
+- User timezone is one of the knowledge differences, and there's no way for the server to know the user's timezone before rendering the page.[^2]
 
-The last point is worth more elaboration. Let's say you needed the user's locale instead. In that case, you could guess it from the request headers[^2]. Donavon West has [an excellent article](https://donavon.com/blog/remix-locale) about this topic that I highly recommend.
+The last point is worth more elaboration. Let's say you needed the user's locale instead. In that case, you could guess it from the request headers[^3]. Donavon West has [an excellent article](https://donavon.com/blog/remix-locale) about this topic that I highly recommend.
 
 On the other hand, if you are willing to make a round trip, you can learn more from the client. Jacob Paris has found [a great way](https://www.jacobparis.com/content/remix-ssr-dates) to inform the server quickly. Kent C. Dodds evolved this idea into [a library](https://github.com/epicweb-dev/client-hints) with well-picked defaults, which you can use if you are happy with its tradeoffs.
 
-However, maybe you're comfortable with the flash of unhydrated content (FOUC)[^3]. If so, you can either follow my initial advice of adding a `suppressHydrationWarning` prop or use one of the many `useIsSSR`[^4] hooks, which returns `false` only after hydration is complete to avoid a mismatch.
+However, maybe you're comfortable with the flash of unhydrated content (FOUC)[^4]. If so, you can either follow my initial advice of adding a `suppressHydrationWarning` prop or use one of the many `useIsSSR`[^5] hooks, which returns `false` only after hydration is complete to avoid a mismatch.
 
-But FOUC is a significant issue that may contribute to cumulative layout shift (CLS)[^5] or hypothetically [send a false missile alert](https://www.epicweb.dev/stop-lying-to-your-users). If you are okay with a round trip occasionally and want a robust solution, consider using `client-hints`. Otherwise, read on.
+But FOUC is a significant issue that may contribute to cumulative layout shift (CLS)[^6] or hypothetically [send a false missile alert](https://www.epicweb.dev/stop-lying-to-your-users). If you are okay with a round trip occasionally and want a robust solution, consider using `client-hints`. Otherwise, read on.
 
 ---
 
@@ -121,7 +121,8 @@ Well, I hope you find it useful. I also hope that React will come up with a firs
 Please let me know if you use it, and I'd love to hear about your experience!
 
 [^1]: https://react.dev/reference/react-dom/client/hydrateRoot
-[^2]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
-[^3]: https://en.wikipedia.org/wiki/Flash_of_unstyled_content
-[^4]: https://react-spectrum.adobe.com/react-aria/useIsSSR.html
-[^5]: https://web.dev/articles/cls
+[^2]: You can try to guess the user's timezone from their IP address, and while this is clumsy and not bulletproof, it may be enough for your use case. Vercel, for example, gives you this information as a [request header](https://vercel.com/docs/edge-network/headers#x-vercel-ip-timezone).
+[^3]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
+[^4]: https://en.wikipedia.org/wiki/Flash_of_unstyled_content
+[^5]: https://react-spectrum.adobe.com/react-aria/useIsSSR.html
+[^6]: https://web.dev/articles/cls
