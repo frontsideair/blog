@@ -46,6 +46,7 @@ Here's how it looks in action:
 export function formatDate(date) {
   return new Intl.DateTimeFormat("en-US", {
     dateStyle: "medium",
+    timeStyle: "medium",
   }).format(date)
 }
 ```
@@ -94,6 +95,8 @@ export function DateTime({ date }) {
   )
 }
 ```
+
+Check [the sandbox](https://stackblitz.com/edit/remix-run-remix-o5qpgi?file=app%2Fcomponents%2FDateTime.tsx) to see it in action and play with it. Even though the example is in Remix, it should work with Next.js or any other framework with SSR support.
 
 Here's how and why it works:
 
