@@ -29,7 +29,7 @@ On the other hand, if you are willing to make a round trip, you can learn more f
 
 However, maybe you're comfortable with the flash of unhydrated content (FOUC)[^4]. If so, you can either follow my initial advice of adding a `suppressHydrationWarning` prop or use one of the many `useIsSSR`[^5] hooks, which returns `false` only after hydration is complete to avoid a mismatch.
 
-But FOUC is a significant issue that may contribute to cumulative layout shift (CLS)[^6] or hypothetically [send a false missile alert](https://www.epicweb.dev/stop-lying-to-your-users). If you are okay with a round trip occasionally and want a robust solution, consider using `client-hints`. Otherwise, read on.
+But FOUC is a significant issue that may contribute to cumulative layout shift (CLS)[^6] or hypothetically send a false missile alert[^7]. If you are okay with a round trip occasionally and want a robust solution, consider using `client-hints`. Otherwise, read on.
 
 ---
 
@@ -112,7 +112,7 @@ I must admit that this solution is hacky and prone to bugs. But I believe it's p
 
 - There's no hard requirement to make the `formatDate` function dependency-free and self-contained. You can use a bundler to serialize it.
 - The `<script>` tag in the entry point has a `suppressHydrationWarning` since the function may have gone through a bundler during the build and may not 1-to-1 match the stringified version.
-- This approach requires a lot of manual wiring, but it's possible to abstract out parts and make it harder to mess it up. One can even generalize it to work with more than just date formatting!
+- This approach requires a bit of manual wiring, but it's possible to abstract out parts and make it harder to mess it up. One can even generalize it to work with more than just date formatting!
 
 ---
 
@@ -120,9 +120,12 @@ Well, I hope you find it useful. I also hope that React will come up with a firs
 
 Please let me know if you use it, and I'd love to hear about your experience!
 
+_Thanks to [Dogan](https://twitter.com/sepet) for reviewing a draft of this article._
+
 [^1]: https://react.dev/reference/react-dom/client/hydrateRoot
 [^2]: You can try to guess the user's timezone from their IP address, and while this is clumsy and not bulletproof, it may be enough for your use case. Vercel, for example, gives you this information as a [request header](https://vercel.com/docs/edge-network/headers#x-vercel-ip-timezone).
 [^3]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
 [^4]: https://en.wikipedia.org/wiki/Flash_of_unstyled_content
 [^5]: https://react-spectrum.adobe.com/react-aria/useIsSSR.html
 [^6]: https://web.dev/articles/cls
+[^7]: https://www.epicweb.dev/stop-lying-to-your-users
