@@ -129,4 +129,4 @@ _Thanks to [Dogan](https://twitter.com/sepet) for reviewing a draft of this arti
 [^5]: https://react-spectrum.adobe.com/react-aria/useIsSSR.html
 [^6]: https://web.dev/articles/cls
 [^7]: https://www.epicweb.dev/stop-lying-to-your-users
-[^8]: Jenna's [progressive enhancement fix](https://www.epicweb.dev/tips/turn-progressive-enhancement-up-to-11) and Oliver's [conditional renderin work](https://gist.github.com/OliverJAsh/e9a588e7e907101affe1a7696a25b1fd#file-skiprenderonclient-tsx-L15) also have been undeniably influential.
+[^8]: Jenna's [progressive enhancement fix](https://www.epicweb.dev/tips/turn-progressive-enhancement-up-to-11) and Oliver's [conditional rendering work](https://gist.github.com/OliverJAsh/e9a588e7e907101affe1a7696a25b1fd#file-skiprenderonclient-tsx-L15) also have been undeniably influential.
