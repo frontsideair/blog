@@ -33,7 +33,7 @@ But FOUC is a significant issue that may contribute to cumulative layout shift (
 
 ---
 
-My approach borrows from [another one of Josh's stellar articles](https://www.joshwcomeau.com/react/dark-mode/) about a similar problem, the dreaded flash of light-mode. It's essentially the same technique: inject a synchronous script to act before the content is painted (or React has started hydration). There are a few steps.
+My approach borrows from [another one of Josh's stellar articles](https://www.joshwcomeau.com/react/dark-mode/) about a similar problem, the dreaded flash of light-mode.[^8] It's essentially the same technique: inject a synchronous script to act before the content is painted (or React has started hydration). There are a few steps.
 
 1. A vanilla JavaScript function is needed to format the date. It has to be dependency-free and self-contained since we must turn it into a string.
 2. Add it to the `window` object at your client entry point.
@@ -129,3 +129,4 @@ _Thanks to [Dogan](https://twitter.com/sepet) for reviewing a draft of this arti
 [^5]: https://react-spectrum.adobe.com/react-aria/useIsSSR.html
 [^6]: https://web.dev/articles/cls
 [^7]: https://www.epicweb.dev/stop-lying-to-your-users
+[^8]: Jenna's [progressive enhancement fix](https://www.epicweb.dev/tips/turn-progressive-enhancement-up-to-11) and Oliver's [conditional renderin work](https://gist.github.com/OliverJAsh/e9a588e7e907101affe1a7696a25b1fd#file-skiprenderonclient-tsx-L15) also have been undeniably influential.
