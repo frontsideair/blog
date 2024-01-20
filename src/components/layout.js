@@ -19,9 +19,10 @@ function Newsletter() {
       </p>
 
       <form
-        action="https://tinyletter.com/frontsideair"
+        action="https://buttondown.email/api/emails/embed-subscribe/frontsideair"
         method="post"
         target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/frontsideair', 'popupwindow')"
       >
         <section style={{ position: "relative", maxWidth: rhythm(12) }}>
           <input
@@ -39,7 +40,6 @@ function Newsletter() {
               paddingRight: rhythm(buttonWidth + paddingX),
             }}
           />
-          <input type="hidden" value="1" name="embed" />
           <button
             type="submit"
             style={{
@@ -54,7 +54,16 @@ function Newsletter() {
             Subscribe
           </button>
         </section>
-        <small>I promise I won't send you spam or sell your email.</small>
+        <small>
+          I promise I won't send you spam or sell your email.{" "}
+          <a
+            href="https://buttondown.email/refer/frontsideair"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Powered by Buttondown.
+          </a>
+        </small>
       </form>
     </section>
   )
