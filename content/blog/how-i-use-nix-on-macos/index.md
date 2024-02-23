@@ -27,7 +27,7 @@ In my case, I started using the Nix package manager with the Nixpkgs repository 
 
 Here are some basic package management commands, you can use this as a cheat sheet.
 
-- Search for a package:
+- Search for a package (alternatively, you can use [the web interface](https://search.nixos.org/packages)):
 
   ```
   > nix search nixpkgs ripgrep
@@ -161,6 +161,8 @@ I hope I made a strong case for the benefits of using Nix as a package manager f
 - [Declarative macOS Configuration Using nix-darwin And home-manager](https://xyno.space/post/nix-darwin-introduction) by Lucy
 
 I hope you'll find Nix as charming and empowering as I do. Let me know if you run into any troubles or just want to share how much you love it!
+
+_Thanks to [Aycan](https://twitter.com/aycanirican) for reviewing a draft of this post._
 
 [^1]: Which I'll just call Linux for brevity for the rest of the article
 [^2]: [Picus Security](https://www.picussecurity.com), one of the best workplaces I worked at with the best teammates
