@@ -96,16 +96,17 @@ If you want to undo an operation that affects your profile, you can undo your la
 - Run a package without installing it:
 
   ```
-  > nix run nixpkgs#cowsay hello
+  > nix run nixpkgs#cowsay -- -f hellokitty nix is fun!
 
-   _______
-  < hello >
-   -------
-          \   ^__^
-           \  (oo)\_______
-              (__)\       )\/\
-                  ||----w |
-                  ||     ||
+   _____________
+  < nix is fun! >
+   -------------
+    \
+     \
+        /\_)o<
+       |      \
+       | O . O|
+        \_____/
   ```
 
 This is a game-changer, you don't have to pollute your system to run a one-off command, or you can try a package out before committing to installing it. Since Nix packages are deterministic, they are built only the first time they are run, afterwards, they are brought back from the cache and installs are instantaneous.
