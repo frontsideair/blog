@@ -32,10 +32,7 @@ const BlogIndex = ({ data, location }) => {
         building web based experiences. I love everything about the web; the
         openness, the approachability, the fun. I'm also very passionate about
         quick feedback cycles, correctness of code, consistency of design, and
-        accessibility. I'm told that I have excellent communication skills and I
-        can guide by asking the right questions. I also can adapt to new
-        situations quickly, can perform under uncertainty, and will always
-        prioritize customer needs.
+        accessibility.
       </p>
 
       <p>
@@ -43,11 +40,14 @@ const BlogIndex = ({ data, location }) => {
         putting a Nintendo cartridge into the motherboard. After that, I kept my
         damage only to the software, occasionally deleting necessary system
         files. Around that time, I got interested in building websites with
-        FrontPage and putting it up using free hosting. Downloading and
-        tinkering with whimsical JavaScript snippets was a fun pastime for me.
-        Other things that I found fun: bricking my laptop while installing{" "}
+        <a href="https://en.wikipedia.org/wiki/Microsoft_FrontPage">
+          FrontPage
+        </a>{" "}
+        and putting it up using free hosting. Downloading and tinkering with
+        whimsical JavaScript snippets was a fun pastime for me. Other things
+        that I found fun: bricking my laptop while installing{" "}
         <a href="https://www.debian.org">various</a>{" "}
-        <a href="https://www.gentoo.org">Linux</a>{" "}
+        <a href="https://www.gentoo.org">GNU/Linux</a>{" "}
         <a href="https://archlinux.org">distros</a>, bricking my phone while
         installing{" "}
         <a href="https://en.wikipedia.org/wiki/CyanogenMod">Android mods</a>,
@@ -76,14 +76,16 @@ export default BlogIndex
 
 export const Head = () => <Seo />
 
-export const pageQuery = graphql`{
-  site {
-    siteMetadata {
-      title
-      author {
-        name
-        summary
+export const pageQuery = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+        author {
+          name
+          summary
+        }
       }
     }
   }
-}`
+`
