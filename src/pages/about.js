@@ -39,7 +39,7 @@ const BlogIndex = ({ data, location }) => {
         I got my first computer at the age of 12 and made it go up in flames by
         putting a Nintendo cartridge into the motherboard. After that, I kept my
         damage only to the software, occasionally deleting necessary system
-        files. Around that time, I got interested in building websites with
+        files. Around that time, I got interested in building websites with{" "}
         <a href="https://en.wikipedia.org/wiki/Microsoft_FrontPage">
           FrontPage
         </a>{" "}
