@@ -10,7 +10,7 @@ module.exports = {
     description: `Ramblings about JavaScript, front-end development, web technologies, functional programming, software engineering and remote work.`,
     siteUrl: `https://blog.6nok.org`,
     social: {
-      twitter: `frontsideair`,
+      mastodon: `https://mastodon.social/@frontsideair`,
       github: `frontsideair`,
     },
   },

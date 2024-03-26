@@ -21,7 +21,7 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            mastodon
           }
         }
       }
@@ -56,7 +56,7 @@ const Bio = () => {
       />
       <p>
         Written by{" "}
-        <a href={`https://mobile.twitter.com/${social.twitter}`}>
+        <a href={social.mastodon}>
           <strong>{author.name}</strong>
         </a>
         , {author.summary} <Link to="/about">Learn more about me &rarr;</Link>

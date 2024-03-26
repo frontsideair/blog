@@ -46,7 +46,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={`https://mobile.twitter.com/intent/tweet?text=${title}&url=${postUrl}&via=${social.twitter}`}
+          href={`https://mobile.twitter.com/intent/tweet?text=${title}&url=${postUrl}`}
         >
           Share on Twitter
         </a>
@@ -121,7 +121,7 @@ export const pageQuery = graphql`
         title
         siteUrl
         social {
-          twitter
+          mastodon
           github
         }
       }
