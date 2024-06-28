@@ -14,7 +14,7 @@ The book had its fun moments, right from the foreword. However, there were also 
 
 The book's language felt foreign to me from time to time. I should mention that I read the Turkish translation, as I don't know Chinese and prefer direct translations to my native language over English translations. So I don't know if it's poor translation, poor writing, or maybe the culture gap was simply too large. It's my first Chinese novel so I don't have any reference point, and it's unlike anything I've ever read.
 
-Lastly, I should mention the sad fate of the author Lao She. He was tortured[^1] by the Red Guards due to his political beliefs, which caused him to lose his sanity. He is thought to have committed suicide by drowning himself in Taiping Lake. This fact was a shock to me, which I found out at the half of the book and changed how I perceived the rest of the book. The bleak ending was a tragic fit.
+Lastly, I should mention the sad fate of the author Lao She. He was tortured[^1] by the Red Guards due to his political beliefs, which caused him to lose his sanity. He is thought to have committed suicide by drowning himself in Taiping Lake the same year. This fact was a shock to me, which I found out at the half of the book and changed how I perceived the rest of the book. The bleak ending was a tragic fit.
 
 I can recommend it if you want a quick and fun read, and would like to expand your horizons a bit.
 
