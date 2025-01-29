@@ -24,7 +24,7 @@ if (!title) {
 
   try {
     extra.outputFileSync(path, body)
-    cp.spawnSync("code", [path])
+    cp.spawnSync("zed", [path])
     console.log(`Blog entry "${title}" is created at "${path}" successfully!`)
   } catch (error) {
     console.error("Got error while creating blog entry!")
