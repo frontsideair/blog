@@ -3,6 +3,6 @@ import "typeface-montserrat"
 import "typeface-merriweather"
 
 import "prismjs/themes/prism.css"
-import { injectSpeedInsights } from "@vercel/speed-insights"
+import { inject } from "@vercel/analytics"
 
-injectSpeedInsights()
+inject()
