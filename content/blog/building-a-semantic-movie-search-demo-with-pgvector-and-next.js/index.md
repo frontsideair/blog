@@ -34,6 +34,29 @@ The next thing I needed was a database that would store the movies along with th
 
 Since *pgvector* is agnostic to the vector embedding that you use, I also had to pick an embedding model. I wanted a cheap and fast model, so after a quick investigation, I settled on [*gte-small*](https://huggingface.co/Supabase/gte-small). With this last thing settled, I was ready to build the thing.
 
+```javascript
+import { pipeline } from "@xenova/transformers";
+import { sql } from "slonik";
+
+const generateEmbedding = await pipeline(
+  "feature-extraction",
+  "Supabase/gte-small"
+);
+
+// generate the embedding & create a sql fragment of vector type
+export async function genEmbedding(texts) {
+  const { data } = await generateEmbedding(texts, {
+    pooling: "mean",
+    normalize: true,
+  });
+
+  return sql.fragment`${sql.array(
+    Array.from(data),
+    sql.fragment`real[]`
+  )}::vector`;
+}
+```
+
 ## Aside: Reproducibility
 
 One thing I care a lot about is *reproducibility*. I want other people to be able to pull and experiment on my project without hitting any roadblocks, and I want to be able to return back to it a few years down the road with a brand new laptop and run it without a hitch.
@@ -42,9 +65,62 @@ So first of all, I added a script to the project that downloads the dataset from
 
 But the most important thing that I did was to integrate [*devenv*](https://devenv.sh), a [Nix](https://blog.6nok.org/how-i-use-nix-on-macos/)-based project that pins every dependency and makes the project easily reproducible. [^2] As an added benefit, it can spawn the database and the dev server together, so it creates a friction-free development environment. But it's opt-in, if you spawn your own PostgreSQL instance, you can use npm scripts to start the project.
 
+```nix
+# simplified devenv config
+{ pkgs, lib, config, inputs, ... }:
+{
+  # environment variables
+  env = { POSTGRES_URL = "postgres://127.0.0.1/movies"; };
+
+  # packages available in the development environment
+  packages = [ pkgs.kaggle ];
+
+  # enable javascript so nodejs and pnpm are available, and dependencies are installed
+  languages.javascript = {
+    enable = true;
+    pnpm.install.enable = true;
+  };
+
+  # this declares postgres, its extensions, and initial databases
+  services.postgres = {
+    enable = true;
+    extensions = extensions: [ extensions.pgvector ];
+    initialDatabases = [
+      {
+        name = "movies";
+        schema = ./migrations/0001_schema.sql;
+      }
+    ];
+  };
+
+  # when you run `devenv processes up` these will run
+  processes.dev = {
+    exec = "pnpm dev";
+    process-compose.depends_on.postgres.condition = "process_healthy";
+  };
+}
+```
+
 ## The application
 
 The next thing I needed was a web application to query the database and see the results. For this, I used Next.js as that's what I'm familiar with, and I wanted to have a full-stack codebase that's highly integrated. I was also able to use newly released features like React Server Components [^3], `<style>` tag hoisting [^4], and `useFormStatus` [^5] hook.
+
+```javascript
+// an example component using modern React features
+export function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <button type="submit" aria-busy={pending}>
+      <style href="submit-button" precedence="default">{`
+        button[type="submit"][aria-busy="true"] {
+          opacity: 0.5;
+        }
+      `}</style>
+      Search{pending ? "..." : ""}
+    </button>
+  );
+}
+```
 
 I didn't want to use an ORM as I've grown disillusioned with them, so I used [Slonik](https://github.com/gajus/slonik), a PostgreSQL client that I've used in the past and enjoyed. It's integrated with [Zod](https://zod.dev) for validation for type-safety and I used Zod elsewhere in the project. I wanted to keep the project simple, so I put my dependencies on a diet and didn't add anything else.
 
@@ -60,6 +136,37 @@ I did most of the work from the Vercel dashboard, and when I had to access Supab
 
 The most important thing I had to do was to set the environment variable `NODE_TLS_REJECT_UNAUTHORIZED=0` on Vercel, which was necessary for some reason, and I felt okay with it since I don't have any sensitive data.
 
+```javascript
+import { parse } from "csv-parse";
+import fs from "fs/promises";
+import { sql, createPool } from "slonik";
+
+const pool = await createPool(process.env.POSTGRES_URL);
+
+const csvFile = await fs.readFile("./movies_metadata.csv", "utf-8");
+
+const parser = parse(csvFile, { columns: true });
+
+// for each record, generate the embedding and insert into the database
+for await (const record of parser) {
+  const { imdbId, title, tagline, overview, releaseDate, voteAverage, genres } = record;
+  const embedding = await genEmbedding([
+  `
+    Title: ${title}
+    Tagline: ${tagline}
+    Overview: ${overview}
+    Release date: ${releaseDate}
+    Genres: ${genres.join(", ")}
+  `,
+  ]);
+
+  await pool.query(sql.typeAlias("void")`
+    INSERT INTO movies (imdb_id, title, tagline, overview, release_date, vote_average, embedding)
+    VALUES (${imdbId}, ${title}, ${tagline}, ${overview}, ${releaseDate}, ${voteAverage}, ${embedding});
+  `);
+}
+```
+
 ## Performance
 
 When I had the application running locally and seeded the database with embeddings, I started testing with some movies I thought of using natural language. Let me be frank, it didn't perform any miracles. Sometimes the movie I was thinking about would be in the top 10 results, sometimes not. But I'm not discouraged.
@@ -69,6 +176,24 @@ My theory about the quality of the results is two-fold: the embedding model that
 But there's some good too! It's somewhat typo-tolerant, unless the typo matches something else exactly. If you search for "old movies", you get some old movies, since I included the release date in the embedding. It's good enough for the money and effort it took to build and run it!
 
 There's also the interesting; if you search for "virtual reality", you get [Oculus](https://www.imdb.com/title/tt2388715/), a horror movie by Mike Flanagan, in the top 20 results. The movie has no relation to VR whatsoever, but it's the name of a popular VR headset, which indicates the model has some sort of world knowledge.
+
+```javascript
+import { sql, createPool } from "slonik";
+
+// get movies by embedding similarity to the query (L2 distance)
+export async function getMovies(query, limit) {
+  const embedding = await genEmbedding([query]);
+  const movies = await pool.query(
+    sql.type(Movie)`
+    SELECT id, imdb_id, title, tagline, overview, release_date, vote_average
+    FROM movies
+    ORDER BY embedding <-> ${embedding}
+    LIMIT ${limit};`
+  );
+
+  return movies.rows;
+}
+```
 
 ## Conclusion
 
