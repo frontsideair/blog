@@ -16,6 +16,8 @@ This reminded me of Tailscale, and I decided to give it a go. From what I could 
 
 Long story short, it worked! I could connect from anywhere with `ssh raspberrypi` command. But my old Raspberry Pi was too weak to run it, so I ended up uninstalling it, and unrelatedly my pet project grew out and has its place in the cloud now.
 
+---
+
 To get started, you need to install the client software on the devices, which are mostly open-source[^4]. Then you need to log in with your account, which is an easy process. I won't go into detail about how to install and use it, since this isn't an ad, and such instructions can quickly go out-of-date.
 
 Some additional and surprising benefits:
