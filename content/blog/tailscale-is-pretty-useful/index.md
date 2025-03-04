@@ -35,5 +35,5 @@ If you have more use cases, feel free to share them with me!
 [^3]: Not to be confused with [VPN services](https://en.wikipedia.org/wiki/VPN_service) that are used for privacy and circumventing censorship
 [^4]: CLI and daemon are open-source, wrappers for non open-source platforms are not: https://github.com/tailscale/tailscale#other-clients
 [^5]: Home theater PC: https://en.wikipedia.org/wiki/Home_theater_PC
-[^6]: Snapdrop has been acquired by LimeWire, resurrected from the dead for NFT grift, glad not to be using it anymore: https://en.wikipedia.org/wiki/LimeWire#Reuse_of_name
+[^6]: Snapdrop has been acquired by LimeWire, [resurrected from the dead for NFT grift](https://en.wikipedia.org/wiki/LimeWire#Reuse_of_name), and it's not peer-to-peer anymore. Use [Pairdrop](https://pairdrop.net), an active fork.
 [^7]: And they don't work together so I have to disable one to enable the other.
