@@ -14,9 +14,9 @@ I know its local IP address and can `ssh` into it easily when I'm home, but when
 
 This reminded me of Tailscale, and I decided to give it a go. From what I could remember, it creates a virtual private network[^3] so you can access your devices anywhere with domain shorthands created by Tailscale.
 
-Long story short, it worked! (I could connect from anywhere with `ssh raspberrypi` command.) But it was too resource hungry for my old Raspberry Pi, so I ended up uninstalling it, and unrelatedly my pet project grew out and has its place in the cloud now.
+Long story short, it worked! I could connect from anywhere with `ssh raspberrypi` command. But my old Raspberry Pi was too weak to run it, so I ended up uninstalling it, and unrelatedly my pet project grew out and has its place in the cloud now.
 
-You need to install the client software on the devices, which are mostly open-source[^4]. Then you need to log in with your account, which is an easy process. I won't go into detail about how to install and use it, since this isn't an ad, and such instructions can quickly go out-of-date.
+To get started, you need to install the client software on the devices, which are mostly open-source[^4]. Then you need to log in with your account, which is an easy process. I won't go into detail about how to install and use it, since this isn't an ad, and such instructions can quickly go out-of-date.
 
 Some additional and surprising benefits:
 1. Exposing a port from your laptop to your phone: When developing a web application, once in a while you'll have to test on an actual device. (You do that, right?) The kind of thing you'd reach for [ngrok](https://ngrok.com) for. You can use the Tailscale-generated domain name (e.g. `http://my-macbook-air:3000`) to effortlessly connect to your development server.
