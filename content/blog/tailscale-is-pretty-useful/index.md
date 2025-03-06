@@ -37,6 +37,6 @@ If you have more use cases, feel free to share them with me!
 [^3]: Not to be confused with [VPN services](https://en.wikipedia.org/wiki/VPN_service) that are used for privacy and circumventing censorship
 [^4]: CLI and daemon are open-source, wrappers for non open-source platforms are not: https://github.com/tailscale/tailscale#other-clients
 [^5]: You can actually do this without any tool using the local address for your dev machine, if both devices are in the same network and your development server listens to `0.0.0.0` (when using Vite, you need to add `--host` flag to do it). But I'd rather use a memorable name instead of a local IP address. Thanks to [jez](https://lobste.rs/s/igqzdo/tailscale_is_pretty_useful#c_mftcut) for reminding me to add this footnote.
-[^5]: Home theater PC: https://en.wikipedia.org/wiki/Home_theater_PC
-[^6]: Snapdrop has been acquired by LimeWire, [resurrected from the dead for NFT grift](https://en.wikipedia.org/wiki/LimeWire#Reuse_of_name), and it's not peer-to-peer anymore. Use [Pairdrop](https://pairdrop.net), an active fork.
-[^7]: And they don't work together so I have to disable one to enable the other.
+[^6]: Home theater PC: https://en.wikipedia.org/wiki/Home_theater_PC
+[^7]: Snapdrop has been acquired by LimeWire, [resurrected from the dead for NFT grift](https://en.wikipedia.org/wiki/LimeWire#Reuse_of_name), and it's not peer-to-peer anymore. Use [Pairdrop](https://pairdrop.net), an active fork.
+[^8]: And they don't work together so I have to disable one to enable the other.
