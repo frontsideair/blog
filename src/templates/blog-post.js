@@ -121,8 +121,8 @@ export const pageQuery = graphql`
         title
         siteUrl
         social {
-          mastodon
           github
+          bluesky
         }
       }
     }

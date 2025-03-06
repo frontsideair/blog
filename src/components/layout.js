@@ -75,7 +75,7 @@ const Layout = ({ location, title, children }) => {
       site {
         siteMetadata {
           social {
-            mastodon
+            bluesky
             github
           }
         }
@@ -141,7 +141,7 @@ const Layout = ({ location, title, children }) => {
       <footer>
         <Newsletter />
         <div style={{ display: "flex" }}>
-          <a href={social.mastodon}>Mastodon</a>
+          <a href={social.bluesky}>Bluesky</a>
           <Separator />
           <a href={`https://github.com/${social.github}`}>GitHub</a>
           <span style={{ flexGrow: 1 }} />
