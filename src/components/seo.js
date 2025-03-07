@@ -46,7 +46,10 @@ const SEO = ({ description, lang, title, children }) => {
         name="google-site-verification"
         content="-KkqY164SihPqHD4tOtlWiNbfP_oX3QOkzmui-q1tPE"
       />
-      <link rel="me" href={site.siteMetadata.social.bluesky} />
+      <link
+        rel="me"
+        href={`https://bsky.app/profile/${site.siteMetadata.social.bluesky}`}
+      />
       {children}
     </>
   )

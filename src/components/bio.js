@@ -56,7 +56,7 @@ const Bio = () => {
       />
       <p>
         Written by{" "}
-        <a href={social.bluesky}>
+        <a href={`https://bsky.app/profile/${social.bluesky}`}>
           <strong>{author.name}</strong>
         </a>
         , {author.summary} <Link to="/about">Learn more about me &rarr;</Link>

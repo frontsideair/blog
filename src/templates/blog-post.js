@@ -17,6 +17,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { title, date } = post.frontmatter
   const { previous, next } = pageContext
   const postUrl = siteUrl + post.fields.slug
+  const encodedUrl = encodeURIComponent(postUrl)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -46,9 +47,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={`https://mobile.twitter.com/intent/tweet?text=${title}&url=${postUrl}`}
+          href={`https://bsky.app/intent/compose?text=You should totally read "${title}" ${encodedUrl}`}
         >
-          Share on Twitter
+          Share on Bluesky
         </a>
         <Separator />
         <a

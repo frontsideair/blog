@@ -10,7 +10,7 @@ module.exports = {
     description: `Ramblings about JavaScript, front-end development, web technologies, functional programming, software engineering and remote work.`,
     siteUrl: `https://blog.6nok.org`,
     social: {
-      bluesky: `https://bsky.app/profile/fatih.6nok.org`,
+      bluesky: `fatih.6nok.org`,
       mastodon: `https://mastodon.social/@frontsideair`,
       github: `frontsideair`,
     },
