@@ -47,7 +47,7 @@ Here are some basic package management commands, you can use this as a cheat she
   ```
   > nix profile list
 
-  Index:              0
+  Name:               ripgrep
   Flake attribute:    legacyPackages.aarch64-darwin.ripgrep
   Original flake URL: flake:nixpkgs
   Locked flake URL:   github:NixOS/nixpkgs/98b00b6947a9214381112bdb6f89c25498db4959
