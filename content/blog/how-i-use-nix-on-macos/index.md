@@ -163,11 +163,11 @@ I hope I made a strong case for the benefits of using Nix as a package manager f
 
 I hope you'll find Nix as charming and empowering as I do. Let me know if you run into any troubles or just want to share how much you love it!
 
-Updates:
+_Thanks to [Aycan](https://twitter.com/aycanirican) and [Taylan](https://twitter.com/taylan_dgn) for reviewing a draft of this post._
+
+### Updates
 
 - 2025-08-21: Simplified `nix upgrade` and `nix remove` commands, since [Nix 2.20](https://nix.dev/manual/nix/2.28/release-notes/rl-2.20) these can use human-readable package names.
-
-_Thanks to [Aycan](https://twitter.com/aycanirican) and [Taylan](https://twitter.com/taylan_dgn) for reviewing a draft of this post._
 
 [^1]: Which I'll just call Linux for brevity for the rest of the article
 [^2]: [Picus Security](https://www.picussecurity.com), one of the best workplaces I worked at with the best teammates
