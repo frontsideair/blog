@@ -167,7 +167,7 @@ _Thanks to [Aycan](https://twitter.com/aycanirican) and [Taylan](https://twitter
 
 ### Updates
 
-- 2025-08-21: Simplified `nix upgrade` and `nix remove` commands, since [Nix 2.20](https://nix.dev/manual/nix/2.28/release-notes/rl-2.20) these can use human-readable package names.
+- 2025-08-21: Simplified `upgrade` and `remove` commands, since [Nix 2.20](https://nix.dev/manual/nix/2.28/release-notes/rl-2.20) these can use human-readable package names.
 
 [^1]: Which I'll just call Linux for brevity for the rest of the article
 [^2]: [Picus Security](https://www.picussecurity.com), one of the best workplaces I worked at with the best teammates
