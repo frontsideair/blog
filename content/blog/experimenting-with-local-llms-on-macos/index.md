@@ -138,6 +138,8 @@ Some models can "think" before generating an answer, which is sometimes called "
 
 Some models are taught to emit special tokens that can call tools specified in the system prompt with the correct arguments. LM Studio has a UI for adding MCP servers and managing the capabilities provided by them.
 
+By default, LM Studio asks you to confirm each tool call request, which is great for security. Tool calls are commonly used for [data exfiltration attacks](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/), which is as bad as it sounds.
+
 LM Studio by default comes with a JavaScript MCP, powered by [Deno](https://deno.com), which provides the LLM the ability to execute code in a sandbox. This is really powerful, you can make it perform hard calculations, analyze data, even generate random numbers. I created a [number guessing game](https://gist.github.com/frontsideair/68d3eb675471ca4bc0388b4a3a32ac3d), which works better than expected.
 
 You can also plug in a web search MCP to give it up-to-date knowledge retrieval capabilities. Since small models have limited world knowledge, this makes them work remarkably well for applicable use cases. I have used [Exa](https://exa.ai)'s free tier for this, which worked well.
@@ -165,9 +167,10 @@ You may not find a model that hits all the capability boxes, so it's better to d
 
 Small models may not replace frontier models in terms of speed or quality, but I still see utility in them. Running them locally is also a good test bed for understanding how they work and learning to work around their weaknesses.
 
-Let me part with a final tip: LM Studio shows you how much of the context window is being used. So you may find it useful to ask for it to summarize the conversation so far, when the context window gets close to being filled. This way you can help it remember important information that it would otherwise forget.
+Let me part with a final tip: LM Studio shows you how much of the context window is being used. So you may find it useful to ask for it to summarize the conversation so far, when the context window gets close to being filled. This way you can help it remember important information that it would otherwise forget.[^3]
 
 Have fun with your brand new genie in your computer!
 
 [^1]: With an M-series, [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon) chipset, Intel chips are pretty old at this point and wouldn't run LLMs well
 [^2]: It's called that because the common wisdom is that models reason with tokens, and a smaller model can generate a higher quality response if it generates more tokens. To protect the user from the burden of reading through more slop, these reasoning tokens are usually hidden from the user.
+[^3]: This is called _compaction_ and, coding tools such as [Claude Code](https://docs.anthropic.com/en/docs/claude-code/costs#reduce-token-usage) can do this automatically, or provide a command for you to trigger it manually.
