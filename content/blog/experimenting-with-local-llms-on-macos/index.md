@@ -23,35 +23,35 @@ description: "A developer's guide to downloading and running LLMs on macOS, for 
         animation-delay: calc(100ms * var(--index));
     }
 
-    :nth-child(9n) {
+    // please css let me access the index T.T
+    :nth-child(1) {
         --index: 0;
     }
-    :nth-child(9n+1) {
+    :nth-child(2) {
         --index: 1;
     }
-    :nth-child(9n+2) {
+    :nth-child(3) {
         --index: 2;
     }
-    :nth-child(9n+3) {
+    :nth-child(4) {
         --index: 3;
     }
-    :nth-child(9n+4) {
+    :nth-child(5) {
         --index: 4;
     }
-    :nth-child(9n+5) {
+    :nth-child(6) {
         --index: 5;
     }
-    :nth-child(9n+6) {
+    :nth-child(7) {
         --index: 6;
     }
-    :nth-child(9n+7) {
+    :nth-child(8) {
         --index: 7;
     }
-    :nth-child(9n+8) {
+    :nth-child(9) {
         --index: 8;
     }
 }
-
 </style>
 
 So, this blog post will be about LLMs, and everyone has <span class="wavy"><span>o</span><span>p</span><span>i</span><span>n</span><span>i</span><span>o</span><span>n</span><span>s</span> about that. To be upfront about it, I'm a skeptic (bordering on hater), yet I like experimenting with stuff so I download and run them locally on my Mac. And I'll teach you how to do it too, if you'd like!
