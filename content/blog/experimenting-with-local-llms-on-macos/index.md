@@ -4,7 +4,57 @@ date: "2025-09-06T10:25:25.214Z"
 description: "A developer's guide to downloading and running LLMs on macOS, for experimentation and privacy."
 ---
 
-So, this blog post will be about LLMs, and everyone has opinions about that. To be upfront about it, I'm a skeptic (bordering on hater), yet I like experimenting with stuff so I download and run them locally on my Mac. And I'll teach you how to do it too, if you'd like!
+<style>
+@keyframes wave {
+  0% {
+      transform: translateY(calc(var(--height) * -1));
+  }
+  100% {
+      transform: translateY(var(--height));
+  }
+}
+
+.wavy {
+    --height: 2px;
+
+    span {
+        display: inline-block;
+        animation: 500ms ease-in-out alternate infinite wave both;
+        animation-delay: calc(100ms * var(--index));
+    }
+
+    :nth-child(9n) {
+        --index: 0;
+    }
+    :nth-child(9n+1) {
+        --index: 1;
+    }
+    :nth-child(9n+2) {
+        --index: 2;
+    }
+    :nth-child(9n+3) {
+        --index: 3;
+    }
+    :nth-child(9n+4) {
+        --index: 4;
+    }
+    :nth-child(9n+5) {
+        --index: 5;
+    }
+    :nth-child(9n+6) {
+        --index: 6;
+    }
+    :nth-child(9n+7) {
+        --index: 7;
+    }
+    :nth-child(9n+8) {
+        --index: 8;
+    }
+}
+
+</style>
+
+So, this blog post will be about LLMs, and everyone has <span class="wavy"><span>o</span><span>p</span><span>i</span><span>n</span><span>i</span><span>o</span><span>n</span><span>s</span> about that. To be upfront about it, I'm a skeptic (bordering on hater), yet I like experimenting with stuff so I download and run them locally on my Mac. And I'll teach you how to do it too, if you'd like!
 
 Some call them fancy autocomplete, some argue that they are sentient and should have rights. The truth is somewhere in between. Yes, they perform next word prediction, but it's so complex that there's nontrivial emergent behavior. No, they don't have creativity or a mind. I believe one day we can create sentient machines, but not in this current iteration, maybe not before we go extinct.
 
