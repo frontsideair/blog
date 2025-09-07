@@ -1,7 +1,7 @@
 ---
 title: "Experimenting with local LLMs on macOS"
 date: "2025-09-06T10:25:25.214Z"
-description: ""
+description: "A developer's guide to downloading and running LLMs on macOS, for experimentation and privacy."
 ---
 
 So, this blog post will be about LLMs, and everyone has opinions about that. To be upfront about it, I'm a skeptic (bordering on hater), yet I like experimenting with stuff so I download and run them locally on my Mac. And I'll teach you how to do it too, if you'd like!
