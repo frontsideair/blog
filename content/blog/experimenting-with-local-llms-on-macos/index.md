@@ -76,7 +76,7 @@ You may be asking, "Well I can do everything you said with ChatGPT free tier, wh
 
 3. I don't feel comfortable giving money to the AI companies. Every single one of them has done some kind of unethical thing, and the way the AI race is going, a hypothetical ethical one will be left behind. They intentionally hype AI, destroy the environment, and plagiarize people's hard work. I'm thankful for the open-weight models they provide and will keep using them, luckily they can't take that away from me.
 
-If you still want to run an LLM on your macOS[^1], let's get started. There are two options, one is open-source and the other is easier to use, as all things are. I only cover macOS because that's what I have; if that's not your platform, you can still follow this guide with platform-specific tweaks, or find another guide.
+If you still want to run an LLM on your macOS[^1], let's get started. There are two options that I recommend, one is open-source and the other is easier to use, as all things are. I only cover macOS because that's what I have; if that's not your platform, you can still follow this guide with platform-specific tweaks, or find another guide.
 
 ## [Llama.cpp](https://github.com/ggml-org/llama.cpp)
 
