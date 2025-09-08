@@ -103,8 +103,7 @@ I will not provide a walkthrough because this is not a product tour and the UI i
 - You can regenerate the assistant message, like ChatGPT
 - You can edit your own messages, also like ChatGPT, but you can also edit assistant messages, which allows you to put words into its mouth
 - You can create presets for system prompts and reuse them for different personas
-- If you use `llama.cpp` runtime, there are a lot of model settings you can configure (this is also available in `llama.cpp` but it's much nicer to use in a GUI)
-- For example, you can customize the context overflow behavior when the context grows larger than the context window (the default is to truncate the middle, so first and last messages are kept, which is a good default)
+- There are a lot of model settings you can configure; for example, you can customize the context overflow behavior when the context grows larger than the context window (the default is to truncate the middle, so first and last messages are kept, which is a good default)
 
 ## How to choose a good LLM for your use case
 
