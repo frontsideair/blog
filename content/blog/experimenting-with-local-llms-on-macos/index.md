@@ -111,11 +111,7 @@ Right now there are a lot of open-weight models around, almost all AI companies 
 
 ### Model size
 
-You may have plenty of free space on your drive, but for the LLM to work you need to load it into memory. So your RAM is the bottleneck. Since the operating system also needs memory to work, if you have 16 GB RAM, like me, then models should be less than 12 GB. Loading larger models may cause you to run out of memory, your system will be unresponsive, and you'll have to perform a hard reboot. Larger models will also run slower.
-
-<!--You may be wondering about performance and if it will be usable. When you generate a model response, two things happen in sequence; prompt processing and token generation. Prompt processing is tokenizing the entire chat history, is done in parallel, and compute bound. Token generation is sequential, and is memory bandwidth bound. Both of these things get slower as the context size increases.-->
-
-<!--Also, counterintuitively, these models don't run on the Neural Engine. Both `llama.cpp` and MLX run on the GPU, using Metal shaders. I'm not sure why though.-->
+You may have plenty of free space on your drive, but for the LLM to work you need to load it into memory. So your RAM is the bottleneck. Since the operating system also needs memory to work, if you have 16 GB RAM, like me, then models should be less than 12 GB. Loading larger models may cause you to run out of memory, your system will be unresponsive, and you'll have to perform a hard reboot. Larger models will also run slower.[^2]
 
 ### Runtime
 
@@ -133,7 +129,7 @@ Some models can tokenize image inputs and can "see" what's inside them. This fee
 
 ### Reasoning
 
-Some models can "think" before generating an answer, which is sometimes called "inference time scaling"[^2]. The general wisdom is that smaller reasoning models can compete with larger non-reasoning models, which is reflected in benchmarks. The downside is that it takes longer to get an answer. So you need to decide if you want a larger but smarter model, or a smaller one that reasons. Keep in mind that reasoning sometimes takes minutes, and fills up the context pretty quickly.
+Some models can "think" before generating an answer, which is sometimes called "inference time scaling"[^3]. The general wisdom is that smaller reasoning models can compete with larger non-reasoning models, which is reflected in benchmarks. The downside is that it takes longer to get an answer. So you need to decide if you want a larger but smarter model, or a smaller one that reasons. Keep in mind that reasoning sometimes takes minutes, and fills up the context pretty quickly.
 
 ### Tool use
 
@@ -168,12 +164,17 @@ You may not find a model that hits all the capability boxes, so it's better to d
 
 Small models may not replace frontier models in terms of speed or quality, but I still see utility in them. Running them locally is also a good test bed for understanding how they work and learning to work around their weaknesses.
 
-Let me part with a final tip: LM Studio shows you how much of the context window is being used. So you may find it useful to ask for it to summarize the conversation so far, when the context window gets close to being filled. This way you can help it remember important information that it would otherwise forget.[^3]
+Let me part with a final tip: LM Studio shows you how much of the context window is being used. So you may find it useful to ask for it to summarize the conversation so far, when the context window gets close to being filled. This way you can help it remember important information that it would otherwise forget.[^4]
 
 Have fun with your brand new genie in your computer!
 
 _Thanks to [Jull](https://monkeykode.com/us#jull-weber) for reviewing an early draft, and my girlfriend for the leekspin hero image._
 
 [^1]: With an M-series, [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon) chipset, Intel chips are pretty old at this point and wouldn't run LLMs well
-[^2]: It's called that because the common wisdom is that models reason with tokens, and a smaller model can generate a higher quality response if it generates more tokens. To protect the user from the burden of reading through more slop, these reasoning tokens are usually hidden from the user.
-[^3]: This is called _compaction_ and, coding tools such as [Claude Code](https://docs.anthropic.com/en/docs/claude-code/costs#reduce-token-usage) can do this automatically, or provide a command for you to trigger it manually.
+[^2]:
+    You may be wondering about performance and if it will be usable. When you generate a model response, two things happen in sequence; prompt processing and token generation. Prompt processing is tokenizing the entire chat history, is done in parallel, and compute bound. Token generation is sequential, and is memory bandwidth bound. Both of these things get slower as the context size increases.
+    <br/>
+    Also, counterintuitively, these models don't run on the [Neural Engine](https://en.wikipedia.org/wiki/Neural_Engine). Both `llama.cpp` and MLX run on the GPU, using Metal shaders. I'm not entirely sure why though.
+
+[^3]: It's called that because the common wisdom is that models reason with tokens, and a smaller model can generate a higher quality response if it generates more tokens. To protect the user from the burden of reading through more slop, these reasoning tokens are usually hidden from the user.
+[^4]: This is called _compaction_ and, coding tools such as [Claude Code](https://docs.anthropic.com/en/docs/claude-code/costs#reduce-token-usage) can do this automatically, or provide a command for you to trigger it manually.
