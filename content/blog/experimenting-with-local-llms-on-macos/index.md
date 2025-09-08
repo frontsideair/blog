@@ -125,7 +125,7 @@ Quantization is a rabbit hole; different kernels are used for quantization, whic
 
 ### Vision models
 
-Some models can tokenize image inputs and can "see" what's inside them. This feels pretty magical; they can read text, recognize objects, and determine the mood or art style. You can use them as basic OCRs but in my experience dedicated OCRs perform better at serious tasks, LLMs tend to make shit up when they can't read.
+Some models can tokenize image inputs and can "see" what's inside them. This feels pretty magical; they can read text, recognize objects, and determine the mood or [art style](https://gist.github.com/frontsideair/0b0e681ef8c4c2eaaed1deeeb804f358). You can use them as basic OCRs but in my experience dedicated OCRs perform better at serious tasks, LLMs tend to make shit up when they can't read.
 
 ### Reasoning
 
