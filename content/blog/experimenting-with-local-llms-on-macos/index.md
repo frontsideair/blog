@@ -1,6 +1,6 @@
 ---
 title: "Experimenting with local LLMs on macOS"
-date: "2025-09-06T10:25:25.214Z"
+date: "2025-09-08T11:49:25.214Z"
 description: "A developer's guide to downloading and running LLMs on macOS, for experimentation and privacy."
 ---
 
