@@ -56,6 +56,8 @@ description: "A developer's guide to downloading and running LLMs on macOS, for 
 
 So, this blog post will be about LLMs, and everyone has <span class="wavy"><span>o</span><span>p</span><span>i</span><span>n</span><span>i</span><span>o</span><span>n</span><span>s</span> about that. To be upfront about it, I'm a skeptic (bordering on hater), yet I like experimenting with stuff so I download and run them locally on my Mac. And I'll teach you how to do it too, if you'd like!
 
+![classic orihime with leek meme, but with multicolored "you're absolutely correct" overlaid on top of it](./orihime_leek.jpeg)
+
 Some call them fancy autocomplete, some argue that they are sentient and should have rights. The truth is somewhere in between. Yes, they perform next word prediction, but it's so complex that there's nontrivial emergent behavior. No, they don't have creativity or a mind. I believe one day we can create sentient machines, but not in this current iteration, maybe not before we go extinct.
 
 Now that we're out of the science fiction territory, let's talk about their strengths. [Laurie has a great post about it](https://seldo.com/posts/what-ive-learned-about-writing-ai-apps-so-far), which I highly recommend, but in summary they are generally good at summarizing text, regurgitating home maintenance advice from reddit, or telling you that you have cancer.
@@ -170,6 +172,8 @@ Small models may not replace frontier models in terms of speed or quality, but I
 Let me part with a final tip: LM Studio shows you how much of the context window is being used. So you may find it useful to ask for it to summarize the conversation so far, when the context window gets close to being filled. This way you can help it remember important information that it would otherwise forget.[^3]
 
 Have fun with your brand new genie in your computer!
+
+_Thanks to [Jull](https://monkeykode.com/us#jull-weber) for reviewing an early draft, and my girlfriend for the leekspin hero image._
 
 [^1]: With an M-series, [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon) chipset, Intel chips are pretty old at this point and wouldn't run LLMs well
 [^2]: It's called that because the common wisdom is that models reason with tokens, and a smaller model can generate a higher quality response if it generates more tokens. To protect the user from the burden of reading through more slop, these reasoning tokens are usually hidden from the user.
