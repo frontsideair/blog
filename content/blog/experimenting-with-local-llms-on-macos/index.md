@@ -168,7 +168,7 @@ Let me part with a final tip: LM Studio shows you how much of the context window
 
 Have fun with your brand new genie in your computer!
 
-_Thanks to [Jull](https://monkeykode.com/us#jull-weber) for reviewing an early draft, and my girlfriend for the leekspin hero image._
+_Thanks to [Jull](https://x.com/jullweber?) for reviewing an early draft, and my girlfriend for the leekspin hero image._
 
 [^0]: MacBook Air with M2 chip, 16 GB memory, 2022 model.
 [^1]: With an M-series, [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon) chipset, Intel chips are pretty old at this point and wouldn't run LLMs well
