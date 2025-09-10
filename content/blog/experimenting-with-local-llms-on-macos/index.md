@@ -54,7 +54,7 @@ description: "A developer's guide to downloading and running LLMs on macOS, for 
 }
 </style>
 
-So, this blog post will be about LLMs, and everyone has <span class="wavy"><span>o</span><span>p</span><span>i</span><span>n</span><span>i</span><span>o</span><span>n</span><span>s</span> about that. To be upfront about it, I'm a skeptic (bordering on hater), yet I like experimenting with stuff so I download and run them locally on my Mac.[^0] And I'll teach you how to do it too, if you'd like!
+So, this blog post will be about LLMs, and everyone has <span class="wavy"><span>o</span><span>p</span><span>i</span><span>n</span><span>i</span><span>o</span><span>n</span><span>s</span> about that. To be upfront about it, I'm a skeptic, yet I like experimenting with stuff so I download and run them locally on my Mac.[^0] And I'll teach you how to do it too, if you'd like!
 
 ![classic orihime with leek meme, but with multicolored "you're absolutely correct" overlaid on top of it](./orihime_leek.jpeg)
 
@@ -168,7 +168,7 @@ Let me part with a final tip: LM Studio shows you how much of the context window
 
 Have fun with your brand new genie in your computer!
 
-_Thanks to [Jull](https://x.com/jullweber?) for reviewing an early draft, and my girlfriend for the leekspin hero image._
+_Thanks to [Jull](https://x.com/jullweber) for reviewing an early draft, and my girlfriend for the leekspin hero image._
 
 [^0]: MacBook Air with M2 chip, 16 GB memory, 2022 model.
 [^1]: With an M-series, [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon) chipset, Intel chips are pretty old at this point and wouldn't run LLMs well
