@@ -145,6 +145,12 @@ Lastly, if you want a model to have long-term memory, there are a ton of MCPs th
 
 One thing to keep in mind regarding MCPs is that since they have to teach the model about themselves, they pollute the context pretty quickly, so be sure to only enable those you need.
 
+### Mixture-of-experts
+
+Some models use different notation for the number of parameters, such as Qwen3 30B A3B, which is a 30 billion parameter model, but the second part denotes that only 3 billion parameters are active, which indicates a mixture-of-experts (MoE) architecture. (Non-MoE models are called "dense" models.)
+
+These models are wholly loaded into the memory as well, so you still need enough RAM to fit; but during inference, only some parameters are activated, so it's cheaper and faster to compute. (Which makes it cheaper to train them as well.) They strike a good balance in terms of quality vs. performance, and more models are being released with this architecture.
+
 ### Aside: Agents
 
 ["Agents are models using tools in a loop."](https://simonwillison.net/2025/May/22/tools-in-a-loop/) So a model that has both reasoning and tool use capabilities hits a sweet spot, and is commonly called an "agent". These can call tools repeatedly while reasoning, and provide a complete answer. The truth is far from perfect, in my experience, but it's still a cool concept.
@@ -169,6 +175,10 @@ Let me part with a final tip: LM Studio shows you how much of the context window
 Have fun with your brand new genie in your computer!
 
 _Thanks to [Jull](https://x.com/jullweber) for reviewing an early draft, and my girlfriend for the leekspin hero image._
+
+### Updates
+
+- 2025-09-12: Added section about [mixture-of-experts](#mixture-of-experts) models.
 
 [^0]: MacBook Air with M2 chip, 16 GB memory, 2022 model.
 [^1]: With an M-series, [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon) chipset, Intel chips are pretty old at this point and wouldn't run LLMs well
