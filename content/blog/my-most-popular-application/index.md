@@ -1,7 +1,7 @@
 ---
 title: "My most popular application"
 date: "2025-10-16T21:20:48.539Z"
-description: "A poignant post about the tracker app I built for my girlfriend"
+description: "A post about the tracker app I built for my girlfriend"
 ---
 
 Let me talk about the most popular application I built. It's [Coriander](https://coriander.6nok.org), a daily tracker used by one person; my girlfriend. She loves it and has been using it daily for more than a year now. She's very happy with it.
